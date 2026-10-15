@@ -81,7 +81,7 @@
     "href": "index.html#latest-work",
     "title": "Turning complex performance data into clear decisions",
     "section": "Latest work",
-    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
+    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#tools-i-work-with",
@@ -95,14 +95,7 @@
     "href": "performance-questions.html",
     "title": "Performance questions",
     "section": "",
-    "text": "Each project starts with a question a coach, practitioner or leader might genuinely ask. I set out why it matters, how I’d test it, what the evidence says and what I’d recommend, usually as a short deck you can read without me presenting it."
-  },
-  {
-    "objectID": "performance-questions.html#in-progress",
-    "href": "performance-questions.html#in-progress",
-    "title": "Performance questions",
-    "section": "In progress",
-    "text": "In progress\n\n\nIn progress\n\nChanging tracking systems without losing the thread\n\n\nA club moves from optical tracking to wearable GPS. Which metrics survive the switch, how do you bridge the two data sets, and what do you tell the staff who rely on them?"
+    "text": "Each project starts with a question a coach, practitioner or leader might genuinely ask. I set out why it matters, how I’d test it, what the evidence says and what I’d recommend, usually as a short deck you can read without me presenting it.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/products/slate-and-signal/index.html",
@@ -159,5 +152,40 @@
     "title": "Slate and Signal: one visual language for every chart, app and deck",
     "section": "What I’d do next",
     "text": "What I’d do next\nPackage the R theme as a small installable package with its own tests, so colleagues could adopt it with library(mdtheme) and get updates automatically."
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html",
+    "href": "projects/performance/rebuilding-match-insight/index.html",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "",
+    "text": "Within 2 h from final whistle to GPS report, down from 10–12 hours\n\n\n2 reports each matched to the decisions its data can support\n\n\n5 matches possession tagging validated against video"
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-question",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-question",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "The question",
+    "text": "The question\nRelegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. How can they keep receiving match physical insight, with context, without a league data feed?"
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
+    "href": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "What I did",
+    "text": "What I did\nTwo sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:\n\nA contextualised GPS report for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player’s output into in possession, out of possession and ball out of play, and into 15-minute blocks.\nA broadcast tracking trend report for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren’t directly comparable.\n\nI lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner’s computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before."
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "The outcome",
+    "text": "The outcome\nThe GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session."
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-deck",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-deck",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "The deck",
+    "text": "The deck\nDownload the deck (PDF)"
   }
 ]
