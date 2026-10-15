@@ -1,0 +1,72 @@
+---
+title: "About"
+description: "Senior Performance Data Scientist, PhD."
+---
+
+I'm a data scientist who has spent six years inside elite football, first as a performance data analyst and now leading data insight for the Sport Science and Medical departments at Leicester City Football Club. My job is to turn large, messy performance data into information that coaches, practitioners and senior staff trust and act on.
+
+I work across the whole data lifecycle: owning pipelines from external providers, building models, and designing self-serve tools so people can answer their own questions. I care as much about how an insight is communicated as about the analysis behind it.
+
+::: {.md-stat-row}
+::: {.md-stat}
+[6+ years]{.v}
+[in elite football data science]{.l}
+:::
+::: {.md-stat}
+[45 → 5 min]{.v}
+[reporting turnaround after automating the pipeline]{.l}
+:::
+::: {.md-stat}
+[PhD]{.v}
+[applying machine learning to Premier League physical performance]{.l}
+:::
+:::
+
+## Experience
+
+<ul class="md-timeline">
+<li class="current">
+<div class="md-when">January 2025 to present</div>
+<div class="md-role">Senior Performance Data Scientist · Leicester City Football Club</div>
+Lead the delivery of data insight to the Sport Science and Medical departments and co-lead the club's data strategy with senior leadership. Built a self-serve R Shiny platform on Posit Connect, adopted across departments, and automated recurring reporting with Quarto. Own relationships with external data providers, line manage a data analyst and work closely with a data engineer on pipeline architecture.
+</li>
+<li>
+<div class="md-when">October 2019 to December 2024</div>
+<div class="md-role">First Team Performance Data Analyst · Leicester City Football Club</div>
+Built interactive dashboards in Tableau and R Shiny to put performance data directly in the hands of staff, and adapted how insight was presented so people without a data background could act on it.
+</li>
+<li>
+<div class="md-when">September 2021 to September 2022</div>
+<div class="md-role">Part-time Lecturer · Middlesex University</div>
+Created and delivered a new module, Data Analysis and Visualisation, for the MSc in Sports Performance Analysis, and supervised MSc dissertations.
+</li>
+</ul>
+
+## Education
+
+<ul class="md-timeline">
+<li class="current">
+<div class="md-when">2020 to 2026</div>
+<div class="md-role">PhD · Middlesex University</div>
+Understanding the 'why' in physical performance: a contextual exploration of physical demands in the English Premier League, applying clustering, mixture models, linear mixed models and CatBoost. Presented at the World Congress of Performance Analysis and Computer Science in Sport, Vienna, 2022.
+</li>
+<li>
+<div class="md-when">2019 to 2020</div>
+<div class="md-role">MSc Performance Analysis (Distinction) · Middlesex University</div>
+</li>
+<li>
+<div class="md-when">2016 to 2019</div>
+<div class="md-role">BSc Sport and Exercise Science (First Class) · Cardiff Metropolitan University</div>
+</li>
+</ul>
+
+## Skills
+
+<ul class="md-tools">
+<li>R (highly proficient)</li><li>Shiny</li><li>Quarto</li><li>ggplot2</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Posit Connect</li>
+<li>PCA and clustering</li><li>Gaussian mixture models</li><li>Linear mixed models</li><li>CatBoost</li><li>Bayesian modelling</li>
+</ul>
+
+## Get in touch
+
+The best way to reach me is on [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN). My code is on [GitHub](https://github.com/michaeldavies64).

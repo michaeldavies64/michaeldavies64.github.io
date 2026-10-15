@@ -1,0 +1,76 @@
+---
+pagetitle: "Michael Davies · Data scientist"
+listing:
+  id: latest-work
+  contents:
+    - "projects/**/index.qmd"
+  type: grid
+  grid-columns: 2
+  sort: "date desc"
+  fields: [image, title, description, categories]
+  image-height: 220px
+  max-items: 4
+---
+
+::: {.md-hero}
+::: {.md-hero-text}
+[Michael Davies, PhD]{.md-eyebrow}
+
+# Turning complex performance data into clear decisions
+
+[I'm a data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that put the right information in front of the people who make the call.]{.md-lead}
+
+::: {.md-actions}
+[See my work](#work){.btn .btn-primary}
+[About me](about.qmd){.btn .btn-outline-secondary}
+:::
+:::
+
+::: {.md-hero-art}
+```{=html}
+<svg viewBox="0 0 280 200" aria-hidden="true">
+  <rect class="ctx" x="0"   y="120" width="28" height="80"  rx="4"/>
+  <rect class="ctx" x="42"  y="80"  width="28" height="120" rx="4"/>
+  <rect class="ctx" x="84"  y="96"  width="28" height="104" rx="4"/>
+  <rect class="sig" x="126" y="0"   width="28" height="200" rx="4"/>
+  <rect class="ctx" x="168" y="70"  width="28" height="130" rx="4"/>
+  <rect class="ctx" x="210" y="110" width="28" height="90"  rx="4"/>
+  <rect class="ctx" x="252" y="140" width="28" height="60"  rx="4"/>
+</svg>
+```
+:::
+:::
+
+## How this portfolio is organised {#work}
+
+```{=html}
+<div class="md-cards">
+  <a class="md-card" href="performance-questions.html">
+    <span class="md-card-num">01</span>
+    <h3>Performance questions</h3>
+    <p>Practical problems from applied environments, framed as a question, reasoned through and answered with a recommendation.</p>
+  </a>
+  <a class="md-card" href="research-questions.html">
+    <span class="md-card-num">02</span>
+    <h3>Research questions</h3>
+    <p>Statistical modelling end to end: choosing the model, fitting and checking it, and communicating uncertainty honestly.</p>
+  </a>
+  <a class="md-card" href="products.html">
+    <span class="md-card-num">03</span>
+    <h3>Products</h3>
+    <p>Things people use: self-serve apps, automated reporting and the design system behind my charts and decks.</p>
+  </a>
+</div>
+```
+
+
+## Latest work
+
+::: {#latest-work}
+:::
+
+## Tools I work with
+
+<ul class="md-tools">
+<li>R</li><li>Shiny</li><li>Quarto</li><li>ggplot2</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Posit Connect</li><li>Stan</li>
+</ul>

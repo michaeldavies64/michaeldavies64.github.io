@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+  execute-dir: project
+
+execute:
+  freeze: auto        # R code runs on your machine; GitHub only publishes the frozen results
+  echo: false
+  warning: false
+  message: false
+
+website:
+  title: "Michael Davies"
+  description: "Data scientist turning complex performance data into clear decisions."
+  site-url: "https://michaeldavies64.github.io/"
+  favicon: images/favicon.svg
+  search: true
+  page-navigation: true
+  navbar:
+    logo: images/mark.svg
+    logo-alt: "Michael Davies"
+    title: "Michael Davies"
+    left:
+      - href: performance-questions.qmd
+        text: Performance questions
+      - href: research-questions.qmd
+        text: Research questions
+      - href: products.qmd
+        text: Products
+      - href: about.qmd
+        text: About
+    right:
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/YOUR-LINKEDIN"
+        aria-label: LinkedIn
+        target: _blank
+      - icon: github
+        href: "https://github.com/michaeldavies64"
+        aria-label: GitHub
+        target: _blank
+  page-footer:
+    left: "© 2026 Michael Davies"
+    right: "Built with R and Quarto · Slate and Signal"
+
+format:
+  html:
+    theme:
+      light: [default, styles/md-light.scss]
+      dark: [default, styles/md-dark.scss]
+    respect-user-color-scheme: true
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    fig-format: svg
+    fig-width: 7
+    fig-height: 4.2

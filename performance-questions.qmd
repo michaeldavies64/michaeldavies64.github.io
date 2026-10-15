@@ -1,0 +1,27 @@
+---
+title: "Performance questions"
+description: "Practical problems from applied sport, framed as a question and answered with a recommendation."
+listing:
+  id: performance-list
+  contents: "projects/performance/*/index.qmd"
+  type: grid
+  grid-columns: 2
+  sort: "date desc"
+  fields: [image, title, description, categories]
+  image-height: 220px
+---
+
+Each project starts with a question a coach, practitioner or leader might genuinely ask. I set out why it matters, how I'd test it, what the evidence says and what I'd recommend, usually as a short deck you can read without me presenting it.
+
+::: {#performance-list}
+:::
+
+## In progress
+
+::: {.md-cards}
+::: {.md-card}
+[In progress]{.md-tag .muted}
+<h3>Changing tracking systems without losing the thread</h3>
+<p>A club moves from optical tracking to wearable GPS. Which metrics survive the switch, how do you bridge the two data sets, and what do you tell the staff who rely on them?</p>
+:::
+:::

@@ -1,0 +1,167 @@
+---
+title: "Slate and Signal: one visual language for every chart, app and deck"
+description: "A personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand."
+date: 2026-10-15
+categories: [Product, Data visualisation, Design system]
+image: thumbnail.png
+---
+
+```{r}
+#| label: setup
+library(ggplot2)
+source("R/theme_md.R")
+```
+
+## The problem
+
+Charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.
+
+I wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader's attention goes straight to the point.
+
+## Three words, turned into rules
+
+The brand is built around three words: **clear, analytical, sharp**. Each one became a rule I could apply without thinking:
+
+- **Clear:** grey carries context and one colour carries the message. Every chart title states the answer, not the topic.
+- **Analytical:** colour has a job. Categorical, sequential, diverging and status colours are separate palettes, and none is borrowed for another's purpose.
+- **Sharp:** one typeface (Inter), two weights, tabular numbers and no decoration that doesn't carry information.
+
+## The palette
+
+```{r}
+#| label: palette
+#| fig-height: 2.6
+#| fig-alt: "The Slate and Signal palette: brand colours, six categorical colours, a sequential teal scale and three status colours."
+pal <- rbind(
+  data.frame(group = "Brand", name = c("Slate", "Signal", "Signal soft", "Context"),
+             hex = c(md_colours$slate, md_colours$signal, md_colours$signal_soft, md_colours$context)),
+  data.frame(group = "Categorical", name = paste("Series", 1:6), hex = md_categorical),
+  data.frame(group = "Sequential", name = paste("Step", 1:6), hex = md_sequential),
+  data.frame(group = "Status", name = c("Good", "Warning", "Alert"),
+             hex = c(md_colours$good, md_colours$warning, md_colours$alert))
+)
+pal$group <- factor(pal$group, levels = rev(c("Brand", "Categorical", "Sequential", "Status")))
+pal$pos <- ave(seq_along(pal$hex), pal$group, FUN = seq_along)
+
+ggplot(pal, aes(pos, group)) +
+  geom_tile(aes(fill = hex), width = 0.92, height = 0.78) +
+  scale_fill_identity() +
+  scale_x_continuous(expand = expansion(add = 0.1)) +
+  labs(x = NULL, y = NULL) +
+  theme_md() +
+  theme(panel.grid = element_blank(), axis.text.x = element_blank(), axis.line.x = element_blank(),
+        axis.text.y = element_text(colour = md_colours$ink_secondary, size = 11, hjust = 0))
+```
+
+Slate gives structure, **signal teal** is the single accent, and a cool grey called **context** is used for everything that supports the message rather than being the message. Status colours are reserved for state (in range, monitor, out of range) and always appear with an icon or a word, never colour alone.
+
+## Built to be readable by everyone
+
+Every text colour was checked against both background colours using the WCAG contrast formula, and the categorical colours were checked under simulated colour-vision deficiency so no two series collapse into the same colour. The table below is calculated live from the palette when the page renders.
+
+```{r}
+#| label: contrast
+luminance <- function(hex) {
+  rgb <- grDevices::col2rgb(hex)[, 1] / 255
+  lin <- ifelse(rgb <= 0.03928, rgb / 12.92, ((rgb + 0.055) / 1.055)^2.4)
+  sum(c(0.2126, 0.7152, 0.0722) * lin)
+}
+contrast <- function(a, b) {
+  l <- sort(c(luminance(a), luminance(b)), decreasing = TRUE)
+  (l[1] + 0.05) / (l[2] + 0.05)
+}
+checks <- data.frame(
+  Use = c("Body text", "Secondary text", "Captions and axis labels", "Accent text and links", "Highlighted chart mark"),
+  Colour = c(md_colours$ink, md_colours$ink_secondary, md_colours$ink_muted, md_colours$signal_text, md_colours$signal),
+  Needs = c(4.5, 4.5, 4.5, 4.5, 3)
+)
+checks$`On white` <- sapply(checks$Colour, contrast, b = md_colours$surface)
+checks$`On card grey` <- sapply(checks$Colour, contrast, b = md_colours$surface_raised)
+checks$Passes <- ifelse(pmin(checks$`On white`, checks$`On card grey`) >= checks$Needs, "Yes", "No")
+checks$`On white` <- sprintf("%.1f : 1", checks$`On white`)
+checks$`On card grey` <- sprintf("%.1f : 1", checks$`On card grey`)
+checks$Needs <- sprintf("%.1f : 1", checks$Needs)
+knitr::kable(checks, align = "llrrrl")
+```
+
+## The core rule: grey for context, signal for the point
+
+The same data, drawn with default settings and then with the system. The default gives every player a different colour, so nothing stands out. With the system, the one player the chart is about is the only thing in colour, and the title says what the reader should take away.
+
+```{r}
+#| label: data
+set.seed(4)
+players <- do.call(rbind, lapply(paste("Player", 1:6), function(p) {
+  base <- runif(1, 250, 450)
+  trend <- if (p == "Player 3") 25 else 0
+  data.frame(player = p, session = 1:10, hsr = base + trend * (1:10) + rnorm(10, 0, 25))
+}))
+```
+
+::: {.panel-tabset}
+
+### Before
+
+```{r}
+#| label: before
+#| fig-alt: "Default ggplot line chart with six differently coloured lines and no clear focus."
+ggplot(players, aes(session, hsr, colour = player)) +
+  geom_line() +
+  labs(title = "High-speed running by player", x = "session", y = "hsr")
+```
+
+### After
+
+```{r}
+#| label: after
+#| fig-alt: "The same chart in Slate and Signal: five grey lines, one teal line rising above a shaded normal range."
+players <- players[order(players$player == "Player 3"), ]
+ggplot(players, aes(session, hsr, colour = player, group = player)) +
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = 300, ymax = 450, fill = md_colours$signal_soft) +
+  annotate("text", x = 1, y = 455, label = "Normal range", hjust = 0, vjust = 0,
+           size = 3.4, colour = md_colours$ink_muted, family = "Inter") +
+  geom_line(aes(linewidth = player == "Player 3")) +
+  scale_linewidth_manual(values = c(0.6, 1.2), guide = "none") +
+  md_highlight("Player 3") +
+  scale_x_continuous(breaks = 1:10) +
+  labs(title = "Player 3 is back above his normal range",
+       subtitle = "High-speed running per session, metres",
+       x = "Session", y = NULL, caption = "Simulated data") +
+  theme_md()
+```
+
+:::
+
+## Style as code
+
+The rules live in one tokens file and are packaged for each tool I use, so a chart picks up the system with a line or two:
+
+```r
+source("R/theme_md.R")
+
+ggplot(df, aes(session, hsr, colour = player)) +
+  geom_line() +
+  md_highlight("Player 3") +   # grey for everyone except the focus
+  theme_md()                   # type, gridlines, titles and captions
+```
+
+The same values drive a matplotlib and Plotly theme for Python, a Streamlit configuration, a Quarto slide theme, a PowerPoint template and this website.
+
+::: {.md-stat-row}
+::: {.md-stat}
+[1]{.v}
+[source of truth for every colour and type style]{.l}
+:::
+::: {.md-stat}
+[6]{.v}
+[tools that inherit it: R, Python, Streamlit, Quarto, PowerPoint, web]{.l}
+:::
+::: {.md-stat}
+[AA]{.v}
+[WCAG contrast for all text, in light and dark mode]{.l}
+:::
+:::
+
+## What I'd do next
+
+Package the R theme as a small installable package with its own tests, so colleagues could adopt it with `library(mdtheme)` and get updates automatically.

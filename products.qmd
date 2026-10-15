@@ -1,0 +1,27 @@
+---
+title: "Products"
+description: "Self-serve apps, automated reporting and the design system behind my work."
+listing:
+  id: products-list
+  contents: "projects/products/*/index.qmd"
+  type: grid
+  grid-columns: 2
+  sort: "date desc"
+  fields: [image, title, description, categories]
+  image-height: 220px
+---
+
+Analysis only helps when people use it. These are the tools and systems I've built so that the right information reaches the right people without waiting on a bespoke request.
+
+::: {#products-list}
+:::
+
+## In progress
+
+::: {.md-cards}
+::: {.md-card}
+[In progress]{.md-tag .muted}
+<h3>Integrated player profile</h3>
+<p>A self-serve app bringing physical output, physical capability, recovery and individual development priorities into one view of a player.</p>
+:::
+:::

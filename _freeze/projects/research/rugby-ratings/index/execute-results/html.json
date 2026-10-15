@@ -1,0 +1,15 @@
+{
+  "hash": "d23845291689c6fe15be90903bed1d60",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Bayesian team ratings and season simulation in rugby\"\ndescription: \"A hierarchical Bayesian model of attack and defence strength, used to simulate a season and estimate finishing probabilities.\"\ndate: 2026-10-15\ncategories: [Research question, Bayesian modelling, Rugby]\nimage: thumbnail.png\ndraft: true   # delete this line when the page is ready to publish\n---\n\n::: {.callout-note appearance=\"simple\"}\n## Before you publish\nReplace each section with your own content and code, add `thumbnail.png` to this folder, then delete the `draft: true` line above. R code chunks run on your machine when you render; GitHub publishes the saved results.\n:::\n\n## The question\n\n## The data\n\n## The model\n\nWhy this model, written for a non-specialist first, with the maths below.\n\n## Checking the model\n\n## Simulating the season\n\n\n::: {.cell}\n\n:::\n\n\n## What it tells us\n\n## Code\n\nLink to the repository.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,27 @@
+---
+title: "Integrated player profile"
+description: "A self-serve app bringing physical output, capability, recovery and development priorities into one view of a player."
+date: 2026-10-15
+categories: [Product, Self-serve app, Player intelligence]
+image: thumbnail.png
+draft: true   # delete this line when the page is ready to publish
+---
+
+::: {.callout-note appearance="simple"}
+## Before you publish
+Replace each section with your own content, add `thumbnail.png` (a screenshot of the app) to this folder, add the app link, then delete the `draft: true` line above.
+:::
+
+## The problem
+
+## Who it's for
+
+## What it shows
+
+## Design decisions
+
+## Try it
+
+[Open the app](#){.btn .btn-primary}
+
+Data: CFC Insights Vizathon 2025 (simulated data).

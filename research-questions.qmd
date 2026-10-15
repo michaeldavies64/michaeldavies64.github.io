@@ -1,0 +1,27 @@
+---
+title: "Research questions"
+description: "Statistical modelling end to end, from model choice to communicating uncertainty."
+listing:
+  id: research-list
+  contents: "projects/research/*/index.qmd"
+  type: grid
+  grid-columns: 2
+  sort: "date desc"
+  fields: [image, title, description, categories]
+  image-height: 220px
+---
+
+These projects take a modelling question all the way through: choosing an approach that fits the data, fitting and checking it, and turning the output into something a non-specialist can use. Code is linked from each project.
+
+::: {#research-list}
+:::
+
+## In progress
+
+::: {.md-cards}
+::: {.md-card}
+[In progress]{.md-tag .muted}
+<h3>Bayesian team ratings and season simulation in rugby</h3>
+<p>A hierarchical Bayesian model of attack and defence strength, fitted with MCMC, used to simulate a season and estimate each team's finishing probabilities.</p>
+:::
+:::

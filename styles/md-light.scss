@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+// Slate and Signal — light theme
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400&display=swap");
+
+$md-slate: #1F2A37;
+$md-ink: #1F2A37;
+$md-ink-secondary: #4E5866;
+$md-ink-muted: #636D7A;
+$md-signal: #009999;
+$md-signal-text: #007A7A;
+$md-signal-soft: #E0F4F4;
+$md-surface: #FFFFFF;
+$md-raised: #F5F7F9;
+$md-line: #D9DEE4;
+$md-context: #B8C0C9;
+
+$body-bg: $md-surface;
+$body-color: $md-ink;
+$body-secondary-color: $md-ink-secondary;
+$text-muted: $md-ink-muted;
+$primary: $md-signal-text;
+$secondary: $md-ink-secondary;
+$link-color: $md-signal-text;
+$link-decoration: none;
+$link-hover-decoration: underline;
+$border-color: $md-line;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, Menlo, monospace;
+$headings-font-weight: 600;
+$headings-color: $md-ink;
+$font-size-base: 1.0625rem;
+$line-height-base: 1.65;
+
+$navbar-bg: $md-slate;
+$navbar-fg: #EEF1F4;
+$navbar-hl: #5FD3D3;
+
+$footer-bg: $md-raised;
+$footer-fg: $md-ink-muted;
+
+$code-color: $md-ink;
+$code-bg: $md-raised;
+$border-radius: 8px;
+
+// shared tokens for rules
+$md-card-bg: $md-raised;
+$md-hero-art-ctx: $md-context;
+
+/*-- scss:rules --*/
+@import "md-rules";

@@ -1,0 +1,100 @@
+// Shared Slate and Signal rules, imported by md-light.scss and md-dark.scss
+
+body { -webkit-font-smoothing: antialiased; }
+table, .md-stat, .md-when, .quarto-listing .listing-date { font-variant-numeric: tabular-nums; }
+.quarto-title-meta-heading, .listing-categories .listing-category, .quarto-category { text-transform: none !important; letter-spacing: 0 !important; }
+
+h1, h2, h3, h4 { letter-spacing: -0.01em; }
+h1.title, .quarto-title h1 { font-size: 2.25rem; letter-spacing: -0.02em; }
+.quarto-title .subtitle, .quarto-title-meta, .description { color: $md-ink-secondary; }
+
+.navbar { padding-top: .5rem; padding-bottom: .5rem; }
+.navbar-brand .navbar-title { font-weight: 600; letter-spacing: -0.01em; }
+.navbar-logo { max-height: 26px; }
+.navbar .nav-link { font-size: .95rem; }
+
+// Hero
+.md-hero {
+  display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 2rem; align-items: end; padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid $md-line; margin-bottom: 2.5rem;
+}
+.md-hero .md-eyebrow { color: $md-signal-text; font-weight: 600; font-size: .95rem; margin-bottom: .5rem; }
+.md-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 1rem; }
+.md-hero p.md-lead { font-size: 1.15rem; color: $md-ink-secondary; max-width: 36rem; }
+.md-hero .md-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.md-hero-art svg { width: 100%; max-width: 280px; height: auto; display: block; margin-left: auto; }
+.md-hero-art .ctx { fill: $md-hero-art-ctx; }
+.md-hero-art .sig { fill: $md-signal; }
+@media (max-width: 767.98px) {
+  .md-hero { grid-template-columns: 1fr; padding-top: 1.5rem; }
+  .md-hero-art { display: none; }
+}
+
+.btn { font-weight: 600; border-radius: 8px; padding: .55rem 1.1rem; }
+.btn-outline-secondary { color: $md-ink; border-color: $md-line; }
+.btn-outline-secondary:hover { background: $md-card-bg; color: $md-ink; border-color: $md-line; }
+
+// Section intro
+.md-section-label { color: $md-signal-text; font-weight: 600; font-size: .9rem; margin-bottom: .25rem; }
+
+// Cards (pillars and coming-soon)
+.md-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin: 1rem 0 2.5rem; }
+.md-card {
+  background: $md-card-bg; border-radius: 12px; padding: 1.25rem 1.25rem 1.1rem;
+  display: flex; flex-direction: column; gap: .35rem; color: $md-ink;
+}
+a.md-card { text-decoration: none; }
+a.md-card:hover { text-decoration: none; outline: 2px solid $md-signal; outline-offset: 0; }
+.md-card .md-card-num { color: $md-signal-text; font-weight: 600; font-size: .9rem; }
+.md-card h3 { font-size: 1.15rem; margin: 0; }
+.md-card p { margin: 0; color: $md-ink-secondary; font-size: .97rem; line-height: 1.55; }
+
+.md-tag {
+  display: inline-block; font-size: .78rem; font-weight: 600; line-height: 1.2;
+  padding: .2rem .5rem; border-radius: 4px; background: $md-signal-soft; color: $md-signal-text;
+  align-self: flex-start;
+}
+.md-tag.muted { background: transparent; border: 1px solid $md-line; color: $md-ink-muted; }
+
+// Listings
+.quarto-listing .card { border: 0; background: $md-card-bg; border-radius: 12px; overflow: hidden; }
+.quarto-listing .card:hover { outline: 2px solid $md-signal; }
+.quarto-listing .card-img-top { background: $md-surface; border-bottom: 1px solid $md-line; }
+.quarto-listing .card-title { font-weight: 600; color: $md-ink; }
+.quarto-listing .card-text, .quarto-listing .listing-description { color: $md-ink-secondary; }
+.listing-categories .listing-category, .quarto-category {
+  background: $md-signal-soft; color: $md-signal-text; border: 0; border-radius: 4px; font-weight: 600; font-size: .75rem;
+}
+
+// Content details
+.md-tools { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0 2rem; padding: 0; list-style: none; }
+.md-tools li { border: 1px solid $md-line; border-radius: 4px; padding: .2rem .6rem; font-size: .9rem; color: $md-ink; }
+
+.md-timeline { list-style: none; padding-left: 0; margin: 1rem 0 2rem; }
+.md-timeline li { padding: 0 0 1.25rem 1.25rem; border-left: 2px solid $md-line; position: relative; }
+.md-timeline li::before {
+  content: ""; position: absolute; left: -6px; top: .45rem; width: 10px; height: 10px; border-radius: 50%;
+  background: $md-context;
+}
+.md-timeline li.current::before { background: $md-signal; }
+.md-timeline .md-when { color: $md-ink-muted; font-size: .9rem; }
+.md-timeline .md-role { font-weight: 600; }
+
+.md-stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.25rem 0 2rem; }
+.md-stat { background: $md-card-bg; border-radius: 12px; padding: 1rem 1.1rem; }
+.md-stat .v { display: block; font-size: 1.9rem; font-weight: 600; letter-spacing: -0.02em; color: $md-signal-text; line-height: 1.1; }
+.md-stat .l { display: block; margin-top: .25rem; color: $md-ink-secondary; font-size: .9rem; }
+
+.md-swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: .75rem; margin: 1rem 0 2rem; }
+.md-swatch { border-radius: 8px; overflow: hidden; border: 1px solid $md-line; font-size: .85rem; }
+.md-swatch .chip { height: 64px; }
+.md-swatch .meta { padding: .5rem .6rem; background: $md-surface; }
+.md-swatch .meta b { display: block; font-weight: 600; color: $md-ink; }
+.md-swatch .meta span { color: $md-ink-muted; font-family: $font-family-monospace; font-size: .8rem; }
+
+figure img, .cell-output-display img, .cell-output-display svg { border-radius: 8px; }
+.callout { border-radius: 8px; }
+table { font-size: .95rem; }
+thead th { color: $md-ink-secondary; font-weight: 600; }
+.nav-footer { font-size: .85rem; }

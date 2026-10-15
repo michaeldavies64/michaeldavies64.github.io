@@ -1,0 +1,38 @@
+---
+title: "Bayesian team ratings and season simulation in rugby"
+description: "A hierarchical Bayesian model of attack and defence strength, used to simulate a season and estimate finishing probabilities."
+date: 2026-10-15
+categories: [Research question, Bayesian modelling, Rugby]
+image: thumbnail.png
+draft: true   # delete this line when the page is ready to publish
+---
+
+::: {.callout-note appearance="simple"}
+## Before you publish
+Replace each section with your own content and code, add `thumbnail.png` to this folder, then delete the `draft: true` line above. R code chunks run on your machine when you render; GitHub publishes the saved results.
+:::
+
+## The question
+
+## The data
+
+## The model
+
+Why this model, written for a non-specialist first, with the maths below.
+
+## Checking the model
+
+## Simulating the season
+
+```{r}
+#| label: example-chunk
+#| eval: false
+source("R/theme_md.R")
+# your model and charts here, styled with theme_md()
+```
+
+## What it tells us
+
+## Code
+
+Link to the repository.

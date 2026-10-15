@@ -1,0 +1,41 @@
+---
+title: "Changing tracking systems without losing the thread"
+description: "Which metrics survive a move from optical tracking to GPS, and how to keep insight continuous for the staff who rely on it."
+date: 2026-10-15
+categories: [Performance question, Tracking data, Stakeholders]
+image: thumbnail.png
+draft: true   # delete this line when the page is ready to publish
+---
+
+::: {.callout-note appearance="simple"}
+## Before you publish
+Replace each section below with your own content, add `thumbnail.png` to this folder, export the deck to PDF as `deck.pdf` into this folder, then delete the `draft: true` line above.
+:::
+
+## The question
+
+One or two sentences, phrased the way a head of performance would ask it.
+
+## Why it matters
+
+What breaks when the data source changes: baselines, thresholds, return-to-play benchmarks, long-term trends.
+
+## How I approached it
+
+The steps you'd take, from auditing current outputs to testing agreement between systems.
+
+## What the evidence says
+
+The key findings, each with its source.
+
+## What I'd recommend
+
+The recommendation and what you'd monitor afterwards.
+
+## The deck
+
+[Download the deck (PDF)](deck.pdf){.btn .btn-primary}
+
+<!-- To show the deck inline, uncomment:
+<iframe src="deck.pdf" width="100%" height="560" style="border:1px solid var(--bs-border-color);border-radius:8px"></iframe>
+-->
