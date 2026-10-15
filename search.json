@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a data scientist who has spent six years inside elite football, first as a performance data analyst and now leading data insight for the Sport Science and Medical departments at Leicester City Football Club. My job is to turn large, messy performance data into information that coaches, practitioners and senior staff trust and act on.\nI work across the whole data lifecycle: owning pipelines from external providers, building models, and designing self-serve tools so people can answer their own questions. I care as much about how an insight is communicated as about the analysis behind it."
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\n\n\n\nJanuary 2025 to present\n\n\nSenior Performance Data Scientist · Leicester City Football Club\n\nLead the delivery of data insight to the Sport Science and Medical departments and co-lead the club’s data strategy with senior leadership. Built a self-serve R Shiny platform on Posit Connect, adopted across departments, and automated recurring reporting with Quarto. Own relationships with external data providers, line manage a data analyst and work closely with a data engineer on pipeline architecture.\n\n\n\nOctober 2019 to December 2024\n\n\nFirst Team Performance Data Analyst · Leicester City Football Club\n\nBuilt interactive dashboards in Tableau and R Shiny to put performance data directly in the hands of staff, and adapted how insight was presented so people without a data background could act on it.\n\n\n\nSeptember 2021 to September 2022\n\n\nPart-time Lecturer · Middlesex University\n\nCreated and delivered a new module, Data Analysis and Visualisation, for the MSc in Sports Performance Analysis, and supervised MSc dissertations."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\n\n\n2020 to 2026\n\n\nPhD · Middlesex University\n\nUnderstanding the ‘why’ in physical performance: a contextual exploration of physical demands in the English Premier League, applying clustering, mixture models, linear mixed models and CatBoost. Presented at the World Congress of Performance Analysis and Computer Science in Sport, Vienna, 2022.\n\n\n\n2019 to 2020\n\n\nMSc Performance Analysis (Distinction) · Middlesex University\n\n\n\n\n2016 to 2019\n\n\nBSc Sport and Exercise Science (First Class) · Cardiff Metropolitan University"
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About",
+    "section": "Skills",
+    "text": "Skills\n\n\nR (highly proficient)\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nPCA and clustering\n\n\nGaussian mixture models\n\n\nLinear mixed models\n\n\nCatBoost\n\n\nBayesian modelling"
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "Get in touch",
+    "text": "Get in touch\nThe best way to reach me is on LinkedIn. My code is on GitHub."
+  },
+  {
+    "objectID": "research-questions.html",
+    "href": "research-questions.html",
+    "title": "Research questions",
+    "section": "",
+    "text": "These projects take a modelling question all the way through: choosing an approach that fits the data, fitting and checking it, and turning the output into something a non-specialist can use. Code is linked from each project."
+  },
+  {
+    "objectID": "research-questions.html#in-progress",
+    "href": "research-questions.html#in-progress",
+    "title": "Research questions",
+    "section": "In progress",
+    "text": "In progress\n\n\nIn progress\n\nBayesian team ratings and season simulation in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, fitted with MCMC, used to simulate a season and estimate each team’s finishing probabilities."
+  },
+  {
+    "objectID": "products.html",
+    "href": "products.html",
+    "title": "Products",
+    "section": "",
+    "text": "Analysis only helps when people use it. These are the tools and systems I’ve built so that the right information reaches the right people without waiting on a bespoke request."
+  },
+  {
+    "objectID": "products.html#in-progress",
+    "href": "products.html#in-progress",
+    "title": "Products",
+    "section": "In progress",
+    "text": "In progress\n\n\nIn progress\n\nIntegrated player profile\n\n\nA self-serve app bringing physical output, physical capability, recovery and individual development priorities into one view of a player."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "",
+    "text": "Michael Davies, PhD\n\n\nI’m a data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that put the right information in front of the people who make the call.\n\nSee my work About me"
+  },
+  {
+    "objectID": "index.html#work",
+    "href": "index.html#work",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "How this portfolio is organised",
+    "text": "How this portfolio is organised\n\n  \n    01\n    Performance questions\n    Practical problems from applied environments, framed as a question, reasoned through and answered with a recommendation.\n  \n  \n    02\n    Research questions\n    Statistical modelling end to end: choosing the model, fitting and checking it, and communicating uncertainty honestly.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
+  },
+  {
+    "objectID": "index.html#latest-work",
+    "href": "index.html#latest-work",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "Latest work",
+    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#tools-i-work-with",
+    "href": "index.html#tools-i-work-with",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "Tools I work with",
+    "text": "Tools I work with\n\n\nR\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nStan"
+  },
+  {
+    "objectID": "performance-questions.html",
+    "href": "performance-questions.html",
+    "title": "Performance questions",
+    "section": "",
+    "text": "Each project starts with a question a coach, practitioner or leader might genuinely ask. I set out why it matters, how I’d test it, what the evidence says and what I’d recommend, usually as a short deck you can read without me presenting it."
+  },
+  {
+    "objectID": "performance-questions.html#in-progress",
+    "href": "performance-questions.html#in-progress",
+    "title": "Performance questions",
+    "section": "In progress",
+    "text": "In progress\n\n\nIn progress\n\nChanging tracking systems without losing the thread\n\n\nA club moves from optical tracking to wearable GPS. Which metrics survive the switch, how do you bridge the two data sets, and what do you tell the staff who rely on them?"
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html",
+    "href": "projects/products/slate-and-signal/index.html",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "",
+    "text": "Charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.\nI wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point."
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#the-problem",
+    "href": "projects/products/slate-and-signal/index.html#the-problem",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "",
+    "text": "Charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.\nI wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point."
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#three-words-turned-into-rules",
+    "href": "projects/products/slate-and-signal/index.html#three-words-turned-into-rules",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "Three words, turned into rules",
+    "text": "Three words, turned into rules\nThe brand is built around three words: clear, analytical, sharp. Each one became a rule I could apply without thinking:\n\nClear: grey carries context and one colour carries the message. Every chart title states the answer, not the topic.\nAnalytical: colour has a job. Categorical, sequential, diverging and status colours are separate palettes, and none is borrowed for another’s purpose.\nSharp: one typeface (Inter), two weights, tabular numbers and no decoration that doesn’t carry information."
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#the-palette",
+    "href": "projects/products/slate-and-signal/index.html#the-palette",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "The palette",
+    "text": "The palette\n\n\n\n\n\n\n\n\n\nSlate gives structure, signal teal is the single accent, and a cool grey called context is used for everything that supports the message rather than being the message. Status colours are reserved for state (in range, monitor, out of range) and always appear with an icon or a word, never colour alone."
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#built-to-be-readable-by-everyone",
+    "href": "projects/products/slate-and-signal/index.html#built-to-be-readable-by-everyone",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "Built to be readable by everyone",
+    "text": "Built to be readable by everyone\nEvery text colour was checked against both background colours using the WCAG contrast formula, and the categorical colours were checked under simulated colour-vision deficiency so no two series collapse into the same colour. The table below is calculated live from the palette when the page renders.\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse\nColour\nNeeds\nOn white\nOn card grey\nPasses\n\n\n\n\nBody text\n#1F2A37\n4.5 : 1\n14.5 : 1\n13.5 : 1\nYes\n\n\nSecondary text\n#4E5866\n4.5 : 1\n7.2 : 1\n6.7 : 1\nYes\n\n\nCaptions and axis labels\n#636D7A\n4.5 : 1\n5.3 : 1\n4.9 : 1\nYes\n\n\nAccent text and links\n#007A7A\n4.5 : 1\n5.2 : 1\n4.8 : 1\nYes\n\n\nHighlighted chart mark\n#009999\n3.0 : 1\n3.5 : 1\n3.3 : 1\nYes"
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#the-core-rule-grey-for-context-signal-for-the-point",
+    "href": "projects/products/slate-and-signal/index.html#the-core-rule-grey-for-context-signal-for-the-point",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "The core rule: grey for context, signal for the point",
+    "text": "The core rule: grey for context, signal for the point\nThe same data, drawn with default settings and then with the system. The default gives every player a different colour, so nothing stands out. With the system, the one player the chart is about is the only thing in colour, and the title says what the reader should take away.\n\nBeforeAfter"
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#style-as-code",
+    "href": "projects/products/slate-and-signal/index.html#style-as-code",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "Style as code",
+    "text": "Style as code\nThe rules live in one tokens file and are packaged for each tool I use, so a chart picks up the system with a line or two:\nsource(\"R/theme_md.R\")\n\nggplot(df, aes(session, hsr, colour = player)) +\n  geom_line() +\n  md_highlight(\"Player 3\") +   # grey for everyone except the focus\n  theme_md()                   # type, gridlines, titles and captions\nThe same values drive a matplotlib and Plotly theme for Python, a Streamlit configuration, a Quarto slide theme, a PowerPoint template and this website.\n\n\n1 source of truth for every colour and type style\n\n\n6 tools that inherit it: R, Python, Streamlit, Quarto, PowerPoint, web\n\n\nAA WCAG contrast for all text, in light and dark mode"
+  },
+  {
+    "objectID": "projects/products/slate-and-signal/index.html#what-id-do-next",
+    "href": "projects/products/slate-and-signal/index.html#what-id-do-next",
+    "title": "Slate and Signal: one visual language for every chart, app and deck",
+    "section": "What I’d do next",
+    "text": "What I’d do next\nPackage the R theme as a small installable package with its own tests, so colleagues could adopt it with library(mdtheme) and get updates automatically."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "listing": "/research-questions.html",
+    "items": []
+  },
+  {
+    "listing": "/products.html",
+    "items": [
+      "/projects/products/slate-and-signal/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/projects/products/slate-and-signal/index.html"
+    ]
+  },
+  {
+    "listing": "/performance-questions.html",
+    "items": []
+  }
+]
