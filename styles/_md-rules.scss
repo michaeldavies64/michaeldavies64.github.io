@@ -98,3 +98,9 @@ figure img, .cell-output-display img, .cell-output-display svg { border-radius: 
 table { font-size: .95rem; }
 thead th { color: $md-ink-secondary; font-weight: 600; }
 .nav-footer { font-size: .85rem; }
+
+// Slide deck shown as images
+.md-slides { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+.md-slides figure, .md-slides p { margin: 0; }
+.md-slides img { width: 100%; height: auto; border: 1px solid $md-line; border-radius: 8px; display: block; }
+.md-slides figcaption { display: none; }

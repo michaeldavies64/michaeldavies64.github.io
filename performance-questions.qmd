@@ -15,13 +15,3 @@ Each project starts with a question a coach, practitioner or leader might genuin
 
 ::: {#performance-list}
 :::
-
-## In progress
-
-::: {.md-cards}
-::: {.md-card}
-[In progress]{.md-tag .muted}
-<h3>Changing tracking systems without losing the thread</h3>
-<p>A club moves from optical tracking to wearable GPS. Which metrics survive the switch, how do you bridge the two data sets, and what do you tell the staff who rely on them?</p>
-:::
-:::

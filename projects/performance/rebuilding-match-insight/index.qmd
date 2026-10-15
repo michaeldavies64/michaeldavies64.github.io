@@ -1,0 +1,45 @@
+---
+title: "Rebuilding match physical insight after relegation"
+description: "How a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2."
+date: 2026-10-15
+categories: [Performance question, GPS data, Automation]
+image: thumbnail.png
+---
+
+::: {.md-stat-row}
+::: {.md-stat}
+[Within 2 h]{.v}
+[from final whistle to GPS report, down from 10–12 hours]{.l}
+:::
+::: {.md-stat}
+[2 reports]{.v}
+[each matched to the decisions its data can support]{.l}
+:::
+::: {.md-stat}
+[5 matches]{.v}
+[possession tagging validated against video]{.l}
+:::
+:::
+
+## The question
+
+Relegation removed the league data feed that match physical insight depended on, and the club's legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. **How can they keep receiving match physical insight, with context, without a league data feed?**
+
+## What I did
+
+Two sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:
+
+- **A contextualised GPS report** for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player's output into in possession, out of possession and ball out of play, and into 15-minute blocks.
+- **A broadcast tracking trend report** for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren't directly comparable.
+
+I lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner's computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before.
+
+## The outcome
+
+The GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session.
+
+## The deck
+
+[Download the deck (PDF)](deck.pdf){.btn .btn-primary}
+
+{{< include _slides.md >}}
