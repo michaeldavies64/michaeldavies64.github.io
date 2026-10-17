@@ -15,13 +15,3 @@ Analysis only helps when people use it. These are the tools and systems I've bui
 
 ::: {#products-list}
 :::
-
-## In progress
-
-::: {.md-cards}
-::: {.md-card}
-[In progress]{.md-tag .muted}
-<h3>Integrated player profile</h3>
-<p>A self-serve app bringing physical output, physical capability, recovery and individual development priorities into one view of a player.</p>
-:::
-:::

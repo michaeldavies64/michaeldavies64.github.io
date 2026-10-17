@@ -104,3 +104,12 @@ thead th { color: $md-ink-secondary; font-weight: 600; }
 .md-slides figure, .md-slides p { margin: 0; }
 .md-slides img { width: 100%; height: auto; border: 1px solid $md-line; border-radius: 8px; display: block; }
 .md-slides figcaption { display: none; }
+
+// Source notes at the foot of a page
+.md-source { color: $md-ink-muted; font-size: .85rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid $md-line; }
+.md-source a { color: $md-ink-muted; text-decoration: underline; }
+
+// Tables scroll inside their own box on phones rather than widening the page
+@media (max-width: 767.98px) {
+  main table { display: block; max-width: 100%; overflow-x: auto; font-size: .85rem; }
+}
