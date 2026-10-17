@@ -6,12 +6,14 @@
   {
     "listing": "/products.html",
     "items": [
+      "/projects/products/load-monitoring/index.html",
       "/projects/products/slate-and-signal/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/projects/products/load-monitoring/index.html",
       "/projects/performance/rebuilding-match-insight/index.html",
       "/projects/products/slate-and-signal/index.html"
     ]
