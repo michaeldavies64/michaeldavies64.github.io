@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-10-17">
-<meta name="description" content="A self-serve view of one player’s GPS load against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data. Context and plan.">
+<meta name="description" content="A self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.">
 
 <title>Building a player load monitoring tool – Michael Davies</title>
 <style>
@@ -50,9 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7679f92b18dcf5edba4446b257d74ced.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-74101570a92ea810bce17a67a58770ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-51184f8a99b2003ce2f8f02f8fb21639.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-74101570a92ea810bce17a67a58770ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-66603adf06ee74c517a6d6caed75ec1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-cbebb23bb9dd0a09af880c9f46516ea2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-66603adf06ee74c517a6d6caed75ec1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -328,14 +328,14 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-categories">
     <div class="quarto-category">Product</div>
     <div class="quarto-category">R</div>
+    <div class="quarto-category">Shiny</div>
     <div class="quarto-category">Load monitoring</div>
-    <div class="quarto-category">In progress</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A self-serve view of one player’s GPS load against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data. Context and plan.
+    A self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.
   </div>
 </div>
 
@@ -358,8 +358,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>The question this tool answers: is this player’s load where it should be for this point in the match week?</strong> I’m building it in R, chapter by chapter, from raw GPS files to a self-serve Shiny app. This page grows as each chapter is completed.</p>
-<p><span class="md-tag">In progress: chapter 1 of 4 complete</span></p>
+<p><strong>The question this tool answers: is this player’s load where it should be for this point in the match week?</strong> It’s built in R, from the raw GPS and recovery files to a self-serve Shiny app, with every decision written up along the way.</p>
+<p><a href="https://connect.posit.cloud/michael-davies-personal/content/01a1595f-e7f0-b63f-d2cf-a1ced13e3f21" class="btn btn-primary" target="_blank">Open the app</a> <a href="https://github.com/michaeldavies64/load-recovery-monitoring" class="btn btn-outline-secondary" target="_blank">View the code on GitHub</a></p>
+<p><span class="md-tag">First version live</span> The app is hosted on Posit Connect Cloud. After a quiet spell it takes about 10 seconds to wake up; the welcome page shows while it does.</p>
 <div class="md-stat-row">
 <div class="md-stat">
 <p><span class="v">3 seasons</span> <span class="l">of daily GPS data, August 2022 to April 2025</span></p>
@@ -470,55 +471,95 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>High-speed running above 21 km/h is the lead measure, with total distance, accelerations and decelerations, and session duration alongside.</p>
 </section>
-<section id="the-plan" class="level2">
-<h2 class="anchored" data-anchor-id="the-plan">The plan</h2>
+<section id="whats-in-the-app" class="level2">
+<h2 class="anchored" data-anchor-id="whats-in-the-app">What’s in the app</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Chapter</th>
-<th>What I’ll build</th>
-<th>What it shows</th>
+<th>Page</th>
+<th>What it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Overview</td>
+<td>Where the player is today: how many metrics are outside their normal range, the latest session, and the last 28 days of load</td>
+</tr>
+<tr class="even">
+<td>Profile</td>
+<td>Who the player is, the current status of every metric, and what each type of day typically looks like</td>
+</tr>
+<tr class="odd">
+<td>Longitudinal</td>
+<td>How load has built over any period: daily, against the adaptive range, or as rolling 7- and 28-day load, with sessions outside their range marked</td>
+</tr>
+<tr class="even">
+<td>Session check</td>
+<td>One session against its normal ranges, against the last 10 sessions of the same type, and the recovery scores that followed</td>
+</tr>
+<tr class="odd">
+<td>Glossary</td>
+<td>What every metric means and how the app uses it</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-its-built" class="level2">
+<h2 class="anchored" data-anchor-id="how-its-built">How it’s built</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>What it does</th>
+<th>Write-up</th>
 <th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Data audit</td>
+<td>1. Data quality</td>
 <td>Automated checks on all four files, and the cleaning rules that follow from them</td>
-<td>Data quality, reproducible R</td>
+<td><a href="https://michaeldavies64.github.io/load-recovery-monitoring/data_quality.html" target="_blank">Data quality report</a></td>
 <td><span class="md-tag">Done</span></td>
 </tr>
 <tr class="even">
 <td>2. Pipeline</td>
-<td>DuckDB tables, a <code>targets</code> pipeline that rebuilds everything from one command, and tests</td>
-<td>SQL, data engineering</td>
-<td><span class="md-tag muted">Next</span></td>
+<td>Raw files into staging, features and monitoring schemas in DuckDB, with every transformation in SQL</td>
+<td><a href="https://github.com/michaeldavies64/load-recovery-monitoring/tree/main/queries" target="_blank">SQL in the repository</a></td>
+<td><span class="md-tag">Done</span></td>
 </tr>
 <tr class="odd">
-<td>3. Load metrics</td>
-<td>Personal norms for each match-week day, rolling 7- and 28-day load, and match load against a full-match reference</td>
-<td>Turning questions into metrics</td>
-<td><span class="md-tag muted">Planned</span></td>
+<td>3. Features</td>
+<td>Match-week labels, a full-match reference (85 to 125 minutes), per-minute and heart-rate band metrics</td>
+<td><a href="https://michaeldavies64.github.io/load-recovery-monitoring/feature_engineering.html" target="_blank">Feature engineering report</a></td>
+<td><span class="md-tag">Done</span></td>
 </tr>
 <tr class="even">
-<td>4. Shiny app</td>
-<td>A self-serve load monitoring module, built in Slate and Signal</td>
-<td>Product design, Shiny</td>
-<td><span class="md-tag muted">Planned</span></td>
+<td>4. Adaptive ranges</td>
+<td>A normal range for every metric on every type of day, learned from the player’s own history and updated after each session</td>
+<td><a href="https://michaeldavies64.github.io/load-recovery-monitoring/adaptive_ranges.html" target="_blank">Adaptive ranges report</a></td>
+<td><span class="md-tag">Done</span></td>
+</tr>
+<tr class="odd">
+<td>5. Shiny app</td>
+<td>A self-serve app in Slate and Signal, split into ui, server, data visualisation and data management</td>
+<td><a href="https://connect.posit.cloud/michael-davies-personal/content/01a1595f-e7f0-b63f-d2cf-a1ced13e3f21" target="_blank">The app</a></td>
+<td><span class="md-tag">Done</span></td>
 </tr>
 </tbody>
 </table>
-<p>The pipeline is shared with the recovery research question, so both end up in the same app. Every table carries a player ID from the start, so a squad view can be added later without rework.</p>
+<p>The adaptive ranges follow <a href="https://doi.org/10.1371/journal.pone.0247338">Roshan et al.&nbsp;(2021)</a>, adapted for a single player. Every table carries a player ID, so a squad view can be added later without rework.</p>
 </section>
-<section id="next-chapter-2" class="level2">
-<h2 class="anchored" data-anchor-id="next-chapter-2">Next: chapter 2</h2>
-<p>The pipeline: turning the raw files into clean, tested tables in DuckDB, built with <code>targets</code> so the whole project rebuilds from a single command.</p>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<ul>
+<li>A <code>targets</code> pipeline, so the whole project rebuilds from one command, and tests for the key tables.</li>
+<li>The companion research question: how recovery responds to load, using the same pipeline.</li>
+</ul>
 <div class="md-source">
 <p><strong>Data:</strong> CFC Insights Vizathon 2025, Chelsea FC Performance Insights (simulated data for one player). Raw files are downloaded from the <a href="https://github.com/Chelsea-Fc-Performance-Insights/Competition">public competition repository</a>, not stored here.<br> <strong>Context:</strong> <a href="https://en.wikipedia.org/wiki/History_of_Chelsea_F.C._(2022%E2%80%93present)">History of Chelsea F.C. (2022–present)</a>, <a href="https://chelseafc.com/en/news/article/chelsea-in-2023-24-all-you-need-to-know">Chelsea in 2023/24</a>, <a href="https://theanalyst.com/articles/2022-23-chelsea-disaster-worst-points-regressions-premier-league-history/">The Analyst</a>, <a href="https://www.premierleague.com/news/4316772">Premier League</a>, <a href="https://www.si.com/soccer/chelsea-win-2024-25-conference-league">Sports Illustrated</a>.</p>
 </div>

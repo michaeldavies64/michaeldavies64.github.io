@@ -1,7 +1,9 @@
 [
   {
-    "listing": "/research-questions.html",
-    "items": []
+    "listing": "/performance-questions.html",
+    "items": [
+      "/projects/performance/rebuilding-match-insight/index.html"
+    ]
   },
   {
     "listing": "/products.html",
@@ -11,17 +13,15 @@
     ]
   },
   {
+    "listing": "/research-questions.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/projects/products/load-monitoring/index.html",
       "/projects/performance/rebuilding-match-insight/index.html",
       "/projects/products/slate-and-signal/index.html"
-    ]
-  },
-  {
-    "listing": "/performance-questions.html",
-    "items": [
-      "/projects/performance/rebuilding-match-insight/index.html"
     ]
   }
 ]

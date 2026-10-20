@@ -1,10 +1,24 @@
 [
   {
+    "objectID": "performance-questions.html",
+    "href": "performance-questions.html",
+    "title": "Performance Questions",
+    "section": "",
+    "text": "Within elite sport, analytical projects often originate from performance questions raised by coaches, practitioners and stakeholders. In this section, I outline how I translate these questions into analytical projects that generate insights and inform practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "products.html",
+    "href": "products.html",
+    "title": "Products",
+    "section": "",
+    "text": "Analysis only helps when people use it. These are the tools and systems I’ve built so that the right information reaches the right people without waiting on a bespoke request.\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "projects/products/load-monitoring/index.html",
     "href": "projects/products/load-monitoring/index.html",
     "title": "Building a player load monitoring tool",
     "section": "",
-    "text": "The question this tool answers: is this player’s load where it should be for this point in the match week? I’m building it in R, chapter by chapter, from raw GPS files to a self-serve Shiny app. This page grows as each chapter is completed.\nIn progress: chapter 1 of 4 complete"
+    "text": "The question this tool answers: is this player’s load where it should be for this point in the match week? It’s built in R, from the raw GPS and recovery files to a self-serve Shiny app, with every decision written up along the way.\nOpen the app View the code on GitHub\nFirst version live The app is hosted on Posit Connect Cloud. After a quiet spell it takes about 10 seconds to wake up; the welcome page shows while it does."
   },
   {
     "objectID": "projects/products/load-monitoring/index.html#context",
@@ -21,53 +35,60 @@
     "text": "What the tool needs to answer\nStaff don’t need every GPS metric every day. They need a few questions answered quickly:\n\nIs today’s load normal for this day of the match week? Each session is compared with the player’s own norm for that match-week day, so an MD-1 is judged against other MD-1s rather than against a match.\nHow is the week building? Rolling load over the last 7 and 28 days shows whether the player is building, holding or dropping relative to their recent history.\nWhat did the match ask of them? Match load set against the player’s typical full-match output, so a short appearance with a high sprint load stands out.\n\nHigh-speed running above 21 km/h is the lead measure, with total distance, accelerations and decelerations, and session duration alongside."
   },
   {
-    "objectID": "projects/products/load-monitoring/index.html#the-plan",
-    "href": "projects/products/load-monitoring/index.html#the-plan",
+    "objectID": "projects/products/load-monitoring/index.html#whats-in-the-app",
+    "href": "projects/products/load-monitoring/index.html#whats-in-the-app",
     "title": "Building a player load monitoring tool",
-    "section": "The plan",
-    "text": "The plan\n\n\n\n\n\n\n\n\n\nChapter\nWhat I’ll build\nWhat it shows\nStatus\n\n\n\n\n1. Data audit\nAutomated checks on all four files, and the cleaning rules that follow from them\nData quality, reproducible R\nDone\n\n\n2. Pipeline\nDuckDB tables, a targets pipeline that rebuilds everything from one command, and tests\nSQL, data engineering\nNext\n\n\n3. Load metrics\nPersonal norms for each match-week day, rolling 7- and 28-day load, and match load against a full-match reference\nTurning questions into metrics\nPlanned\n\n\n4. Shiny app\nA self-serve load monitoring module, built in Slate and Signal\nProduct design, Shiny\nPlanned\n\n\n\nThe pipeline is shared with the recovery research question, so both end up in the same app. Every table carries a player ID from the start, so a squad view can be added later without rework."
+    "section": "What’s in the app",
+    "text": "What’s in the app\n\n\n\n\n\n\n\nPage\nWhat it answers\n\n\n\n\nOverview\nWhere the player is today: how many metrics are outside their normal range, the latest session, and the last 28 days of load\n\n\nProfile\nWho the player is, the current status of every metric, and what each type of day typically looks like\n\n\nLongitudinal\nHow load has built over any period: daily, against the adaptive range, or as rolling 7- and 28-day load, with sessions outside their range marked\n\n\nSession check\nOne session against its normal ranges, against the last 10 sessions of the same type, and the recovery scores that followed\n\n\nGlossary\nWhat every metric means and how the app uses it"
   },
   {
-    "objectID": "projects/products/load-monitoring/index.html#next-chapter-2",
-    "href": "projects/products/load-monitoring/index.html#next-chapter-2",
+    "objectID": "projects/products/load-monitoring/index.html#how-its-built",
+    "href": "projects/products/load-monitoring/index.html#how-its-built",
     "title": "Building a player load monitoring tool",
-    "section": "Next: chapter 2",
-    "text": "Next: chapter 2\nThe pipeline: turning the raw files into clean, tested tables in DuckDB, built with targets so the whole project rebuilds from a single command.\n\nData: CFC Insights Vizathon 2025, Chelsea FC Performance Insights (simulated data for one player). Raw files are downloaded from the public competition repository, not stored here. Context: History of Chelsea F.C. (2022–present), Chelsea in 2023/24, The Analyst, Premier League, Sports Illustrated."
+    "section": "How it’s built",
+    "text": "How it’s built\n\n\n\nStage\nWhat it does\nWrite-up\nStatus\n\n\n\n\n1. Data quality\nAutomated checks on all four files, and the cleaning rules that follow from them\nData quality report\nDone\n\n\n2. Pipeline\nRaw files into staging, features and monitoring schemas in DuckDB, with every transformation in SQL\nSQL in the repository\nDone\n\n\n3. Features\nMatch-week labels, a full-match reference (85 to 125 minutes), per-minute and heart-rate band metrics\nFeature engineering report\nDone\n\n\n4. Adaptive ranges\nA normal range for every metric on every type of day, learned from the player’s own history and updated after each session\nAdaptive ranges report\nDone\n\n\n5. Shiny app\nA self-serve app in Slate and Signal, split into ui, server, data visualisation and data management\nThe app\nDone\n\n\n\nThe adaptive ranges follow Roshan et al. (2021), adapted for a single player. Every table carries a player ID, so a squad view can be added later without rework."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "projects/products/load-monitoring/index.html#next",
+    "href": "projects/products/load-monitoring/index.html#next",
+    "title": "Building a player load monitoring tool",
+    "section": "Next",
+    "text": "Next\n\nA targets pipeline, so the whole project rebuilds from one command, and tests for the key tables.\nThe companion research question: how recovery responds to load, using the same pipeline.\n\n\nData: CFC Insights Vizathon 2025, Chelsea FC Performance Insights (simulated data for one player). Raw files are downloaded from the public competition repository, not stored here. Context: History of Chelsea F.C. (2022–present), Chelsea in 2023/24, The Analyst, Premier League, Sports Illustrated."
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html",
+    "href": "projects/performance/rebuilding-match-insight/index.html",
+    "title": "Rebuilding match physical insight after relegation",
     "section": "",
-    "text": "I’m a data scientist who has spent six years inside elite football, first as a performance data analyst and now leading data insight for the Sport Science and Medical departments at Leicester City Football Club. My job is to turn large, messy performance data into information that coaches, practitioners and senior staff trust and act on.\nI work across the whole data lifecycle: owning pipelines from external providers, building models, and designing self-serve tools so people can answer their own questions. I care as much about how an insight is communicated as about the analysis behind it."
+    "text": "Within 2 h from final whistle to GPS report, down from 10–12 hours\n\n\n2 reports each matched to the decisions its data can support\n\n\n5 matches possession tagging validated against video"
   },
   {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "About",
-    "section": "Experience",
-    "text": "Experience\n\n\n\nJanuary 2025 to present\n\n\nSenior Performance Data Scientist · Leicester City Football Club\n\nLead the delivery of data insight to the Sport Science and Medical departments and co-lead the club’s data strategy with senior leadership. Built a self-serve R Shiny platform on Posit Connect, adopted across departments, and automated recurring reporting with Quarto. Own relationships with external data providers, line manage a data analyst and work closely with a data engineer on pipeline architecture.\n\n\n\nOctober 2019 to December 2024\n\n\nFirst Team Performance Data Analyst · Leicester City Football Club\n\nBuilt interactive dashboards in Tableau and R Shiny to put performance data directly in the hands of staff, and adapted how insight was presented so people without a data background could act on it.\n\n\n\nSeptember 2021 to September 2022\n\n\nPart-time Lecturer · Middlesex University\n\nCreated and delivered a new module, Data Analysis and Visualisation, for the MSc in Sports Performance Analysis, and supervised MSc dissertations."
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-question",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-question",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "The question",
+    "text": "The question\nRelegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. How can they keep receiving match physical insight, with context, without a league data feed?"
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About",
-    "section": "Education",
-    "text": "Education\n\n\n\n2020 to 2026\n\n\nPhD · Middlesex University\n\nUnderstanding the ‘why’ in physical performance: a contextual exploration of physical demands in the English Premier League, applying clustering, mixture models, linear mixed models and CatBoost. Presented at the World Congress of Performance Analysis and Computer Science in Sport, Vienna, 2022.\n\n\n\n2019 to 2020\n\n\nMSc Performance Analysis (Distinction) · Middlesex University\n\n\n\n\n2016 to 2019\n\n\nBSc Sport and Exercise Science (First Class) · Cardiff Metropolitan University"
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
+    "href": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "What I did",
+    "text": "What I did\nTwo sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:\n\nA contextualised GPS report for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player’s output into in possession, out of possession and ball out of play, and into 15-minute blocks.\nA broadcast tracking trend report for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren’t directly comparable.\n\nI lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner’s computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before."
   },
   {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
-    "title": "About",
-    "section": "Skills",
-    "text": "Skills\n\n\nR (highly proficient)\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nPCA and clustering\n\n\nGaussian mixture models\n\n\nLinear mixed models\n\n\nCatBoost\n\n\nBayesian modelling"
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "The outcome",
+    "text": "The outcome\nThe GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session."
   },
   {
-    "objectID": "about.html#get-in-touch",
-    "href": "about.html#get-in-touch",
-    "title": "About",
-    "section": "Get in touch",
-    "text": "Get in touch\nThe best way to reach me is on LinkedIn. My code is on GitHub."
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-deck",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-deck",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "The deck",
+    "text": "The deck\nDownload the deck (PDF)"
   },
   {
     "objectID": "research-questions.html",
@@ -82,48 +103,6 @@
     "title": "Research questions",
     "section": "In progress",
     "text": "In progress\n\n\nIn progress\n\nBayesian team ratings and season simulation in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, fitted with MCMC, used to simulate a season and estimate each team’s finishing probabilities."
-  },
-  {
-    "objectID": "products.html",
-    "href": "products.html",
-    "title": "Products",
-    "section": "",
-    "text": "Analysis only helps when people use it. These are the tools and systems I’ve built so that the right information reaches the right people without waiting on a bespoke request.\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nLoad monitoring\n\nIn progress\n\n\n\nA self-serve view of one player’s GPS load against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data. Context and plan.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "",
-    "text": "Michael Davies, PhD\n\n\nI’m a data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that put the right information in front of the people who make the call.\n\nSee my work About me"
-  },
-  {
-    "objectID": "index.html#work",
-    "href": "index.html#work",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "How this portfolio is organised",
-    "text": "How this portfolio is organised\n\n  \n    01\n    Performance questions\n    Practical problems from applied environments, framed as a question, reasoned through and answered with a recommendation.\n  \n  \n    02\n    Research questions\n    Statistical modelling end to end: choosing the model, fitting and checking it, and communicating uncertainty honestly.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
-  },
-  {
-    "objectID": "index.html#latest-work",
-    "href": "index.html#latest-work",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "Latest work",
-    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nLoad monitoring\n\nIn progress\n\n\n\nA self-serve view of one player’s GPS load against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data. Context and plan.\n\n\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#tools-i-work-with",
-    "href": "index.html#tools-i-work-with",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "Tools I work with",
-    "text": "Tools I work with\n\n\nR\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nStan"
-  },
-  {
-    "objectID": "performance-questions.html",
-    "href": "performance-questions.html",
-    "title": "Performance Questions",
-    "section": "",
-    "text": "Within elite sport, analytical projects often originate from performance questions raised by coaches, practitioners and stakeholders. In this section, I outline how I translate these questions into analytical projects that generate insights and inform practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/products/slate-and-signal/index.html",
@@ -182,38 +161,66 @@
     "text": "What I’d do next\nPackage the R theme as a small installable package with its own tests, so colleagues could adopt it with library(mdtheme) and get updates automatically."
   },
   {
-    "objectID": "projects/performance/rebuilding-match-insight/index.html",
-    "href": "projects/performance/rebuilding-match-insight/index.html",
-    "title": "Rebuilding match physical insight after relegation",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Within 2 h from final whistle to GPS report, down from 10–12 hours\n\n\n2 reports each matched to the decisions its data can support\n\n\n5 matches possession tagging validated against video"
+    "text": "I’m a data scientist who has spent six years inside elite football, first as a performance data analyst and now leading data insight for the Sport Science and Medical departments at Leicester City Football Club. My job is to turn large, messy performance data into information that coaches, practitioners and senior staff trust and act on.\nI work across the whole data lifecycle: owning pipelines from external providers, building models, and designing self-serve tools so people can answer their own questions. I care as much about how an insight is communicated as about the analysis behind it."
   },
   {
-    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-question",
-    "href": "projects/performance/rebuilding-match-insight/index.html#the-question",
-    "title": "Rebuilding match physical insight after relegation",
-    "section": "The question",
-    "text": "The question\nRelegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. How can they keep receiving match physical insight, with context, without a league data feed?"
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\n\n\n\nJanuary 2025 to present\n\n\nSenior Performance Data Scientist · Leicester City Football Club\n\nLead the delivery of data insight to the Sport Science and Medical departments and co-lead the club’s data strategy with senior leadership. Built a self-serve R Shiny platform on Posit Connect, adopted across departments, and automated recurring reporting with Quarto. Own relationships with external data providers, line manage a data analyst and work closely with a data engineer on pipeline architecture.\n\n\n\nOctober 2019 to December 2024\n\n\nFirst Team Performance Data Analyst · Leicester City Football Club\n\nBuilt interactive dashboards in Tableau and R Shiny to put performance data directly in the hands of staff, and adapted how insight was presented so people without a data background could act on it.\n\n\n\nSeptember 2021 to September 2022\n\n\nPart-time Lecturer · Middlesex University\n\nCreated and delivered a new module, Data Analysis and Visualisation, for the MSc in Sports Performance Analysis, and supervised MSc dissertations."
   },
   {
-    "objectID": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
-    "href": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
-    "title": "Rebuilding match physical insight after relegation",
-    "section": "What I did",
-    "text": "What I did\nTwo sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:\n\nA contextualised GPS report for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player’s output into in possession, out of possession and ball out of play, and into 15-minute blocks.\nA broadcast tracking trend report for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren’t directly comparable.\n\nI lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner’s computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before."
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\n\n\n2020 to 2026\n\n\nPhD · Middlesex University\n\nUnderstanding the ‘why’ in physical performance: a contextual exploration of physical demands in the English Premier League, applying clustering, mixture models, linear mixed models and CatBoost. Presented at the World Congress of Performance Analysis and Computer Science in Sport, Vienna, 2022.\n\n\n\n2019 to 2020\n\n\nMSc Performance Analysis (Distinction) · Middlesex University\n\n\n\n\n2016 to 2019\n\n\nBSc Sport and Exercise Science (First Class) · Cardiff Metropolitan University"
   },
   {
-    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
-    "href": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
-    "title": "Rebuilding match physical insight after relegation",
-    "section": "The outcome",
-    "text": "The outcome\nThe GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session."
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About",
+    "section": "Skills",
+    "text": "Skills\n\n\nR (highly proficient)\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nPCA and clustering\n\n\nGaussian mixture models\n\n\nLinear mixed models\n\n\nCatBoost\n\n\nBayesian modelling"
   },
   {
-    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-deck",
-    "href": "projects/performance/rebuilding-match-insight/index.html#the-deck",
-    "title": "Rebuilding match physical insight after relegation",
-    "section": "The deck",
-    "text": "The deck\nDownload the deck (PDF)"
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "Get in touch",
+    "text": "Get in touch\nThe best way to reach me is on LinkedIn. My code is on GitHub."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "",
+    "text": "Michael Davies, PhD\n\n\nI’m a data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that put the right information in front of the people who make the call.\n\nSee my work About me"
+  },
+  {
+    "objectID": "index.html#work",
+    "href": "index.html#work",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "How this portfolio is organised",
+    "text": "How this portfolio is organised\n\n  \n    01\n    Performance questions\n    Practical problems from applied environments, framed as a question, reasoned through and answered with a recommendation.\n  \n  \n    02\n    Research questions\n    Statistical modelling end to end: choosing the model, fitting and checking it, and communicating uncertainty honestly.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
+  },
+  {
+    "objectID": "index.html#latest-work",
+    "href": "index.html#latest-work",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "Latest work",
+    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#tools-i-work-with",
+    "href": "index.html#tools-i-work-with",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "Tools I work with",
+    "text": "Tools I work with\n\n\nR\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nStan"
   }
 ]
