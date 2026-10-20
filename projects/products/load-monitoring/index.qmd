@@ -1,14 +1,16 @@
 ---
 title: "Building a player load monitoring tool"
-description: "A self-serve view of one player's GPS load against what's normal for each day of the match week, built in R on Chelsea FC's Vizathon data. Context and plan."
+description: "A self-serve Shiny app showing one player's GPS load and recovery against what's normal for each day of the match week, built in R on Chelsea FC's Vizathon data."
 date: 2026-10-17
-categories: [Product, R, Load monitoring, In progress]
+categories: [Product, R, Shiny, Load monitoring]
 image: thumbnail.png
 ---
 
-**The question this tool answers: is this player's load where it should be for this point in the match week?** I'm building it in R, chapter by chapter, from raw GPS files to a self-serve Shiny app. This page grows as each chapter is completed.
+**The question this tool answers: is this player's load where it should be for this point in the match week?** It's built in R, from the raw GPS and recovery files to a self-serve Shiny app, with every decision written up along the way.
 
-[In progress: chapter 1 of 4 complete]{.md-tag}
+[Open the app](https://connect.posit.cloud/michael-davies-personal/content/01a1595f-e7f0-b63f-d2cf-a1ced13e3f21){.btn .btn-primary target="_blank"} [View the code on GitHub](https://github.com/michaeldavies64/load-recovery-monitoring){.btn .btn-outline-secondary target="_blank"}
+
+[First version live]{.md-tag} The app is hosted on Posit Connect Cloud. After a quiet spell it takes about 10 seconds to wake up; the welcome page shows while it does.
 
 ::: {.md-stat-row}
 ::: {.md-stat}
@@ -66,20 +68,32 @@ Staff don't need every GPS metric every day. They need a few questions answered 
 
 High-speed running above 21 km/h is the lead measure, with total distance, accelerations and decelerations, and session duration alongside.
 
-## The plan
+## What's in the app
 
-| Chapter | What I'll build | What it shows | Status |
+| Page | What it answers |
+|---|---|
+| Overview | Where the player is today: how many metrics are outside their normal range, the latest session, and the last 28 days of load |
+| Profile | Who the player is, the current status of every metric, and what each type of day typically looks like |
+| Longitudinal | How load has built over any period: daily, against the adaptive range, or as rolling 7- and 28-day load, with sessions outside their range marked |
+| Session check | One session against its normal ranges, against the last 10 sessions of the same type, and the recovery scores that followed |
+| Glossary | What every metric means and how the app uses it |
+
+## How it's built
+
+| Stage | What it does | Write-up | Status |
 |---|---|---|---|
-| 1. Data audit | Automated checks on all four files, and the cleaning rules that follow from them | Data quality, reproducible R | [Done]{.md-tag} |
-| 2. Pipeline | DuckDB tables, a `targets` pipeline that rebuilds everything from one command, and tests | SQL, data engineering | [Next]{.md-tag .muted} |
-| 3. Load metrics | Personal norms for each match-week day, rolling 7- and 28-day load, and match load against a full-match reference | Turning questions into metrics | [Planned]{.md-tag .muted} |
-| 4. Shiny app | A self-serve load monitoring module, built in Slate and Signal | Product design, Shiny | [Planned]{.md-tag .muted} |
+| 1. Data quality | Automated checks on all four files, and the cleaning rules that follow from them | [Data quality report](https://michaeldavies64.github.io/load-recovery-monitoring/data_quality.html){target="_blank"} | [Done]{.md-tag} |
+| 2. Pipeline | Raw files into staging, features and monitoring schemas in DuckDB, with every transformation in SQL | [SQL in the repository](https://github.com/michaeldavies64/load-recovery-monitoring/tree/main/queries){target="_blank"} | [Done]{.md-tag} |
+| 3. Features | Match-week labels, a full-match reference (85 to 125 minutes), per-minute and heart-rate band metrics | [Feature engineering report](https://michaeldavies64.github.io/load-recovery-monitoring/feature_engineering.html){target="_blank"} | [Done]{.md-tag} |
+| 4. Adaptive ranges | A normal range for every metric on every type of day, learned from the player's own history and updated after each session | [Adaptive ranges report](https://michaeldavies64.github.io/load-recovery-monitoring/adaptive_ranges.html){target="_blank"} | [Done]{.md-tag} |
+| 5. Shiny app | A self-serve app in Slate and Signal, split into ui, server, data visualisation and data management | [The app](https://connect.posit.cloud/michael-davies-personal/content/01a1595f-e7f0-b63f-d2cf-a1ced13e3f21){target="_blank"} | [Done]{.md-tag} |
 
-The pipeline is shared with the recovery research question, so both end up in the same app. Every table carries a player ID from the start, so a squad view can be added later without rework.
+The adaptive ranges follow [Roshan et al. (2021)](https://doi.org/10.1371/journal.pone.0247338), adapted for a single player. Every table carries a player ID, so a squad view can be added later without rework.
 
-## Next: chapter 2
+## Next
 
-The pipeline: turning the raw files into clean, tested tables in DuckDB, built with `targets` so the whole project rebuilds from a single command.
+- A `targets` pipeline, so the whole project rebuilds from one command, and tests for the key tables.
+- The companion research question: how recovery responds to load, using the same pipeline.
 
 ::: {.md-source}
 **Data:** CFC Insights Vizathon 2025, Chelsea FC Performance Insights (simulated data for one player). Raw files are downloaded from the [public competition repository](https://github.com/Chelsea-Fc-Performance-Insights/Competition), not stored here.<br>
