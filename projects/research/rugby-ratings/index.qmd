@@ -2,7 +2,7 @@
 title: "Bayesian team ratings and season simulation in rugby"
 description: "A hierarchical Bayesian model of attack and defence strength, used to simulate a season and estimate finishing probabilities."
 date: 2026-10-15
-categories: [Research question, Bayesian modelling, Rugby]
+categories: [Research Question, Bayesian modelling, Rugby]
 image: thumbnail.png
 draft: true   # delete this line when the page is ready to publish
 ---

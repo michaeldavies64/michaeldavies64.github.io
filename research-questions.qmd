@@ -1,6 +1,6 @@
 ---
-title: "Research questions"
-description: "Statistical modelling end to end, from model choice to communicating uncertainty."
+title: "Research Questions"
+description: "Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models."
 listing:
   id: research-list
   contents: "projects/research/*/index.qmd"

@@ -147,21 +147,6 @@ ggplot(df, aes(session, hsr, colour = player)) +
 
 The same values drive a matplotlib and Plotly theme for Python, a Streamlit configuration, a Quarto slide theme, a PowerPoint template and this website.
 
-::: {.md-stat-row}
-::: {.md-stat}
-[1]{.v}
-[source of truth for every colour and type style]{.l}
-:::
-::: {.md-stat}
-[6]{.v}
-[tools that inherit it: R, Python, Streamlit, Quarto, PowerPoint, web]{.l}
-:::
-::: {.md-stat}
-[AA]{.v}
-[WCAG contrast for all text, in light and dark mode]{.l}
-:::
-:::
-
 ## What I'd do next
 
 Package the R theme as a small installable package with its own tests, so colleagues could adopt it with `library(mdtheme)` and get updates automatically.

@@ -2,41 +2,39 @@
 title: "Rebuilding match physical insight after relegation"
 description: "How a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2."
 date: 2026-10-15
-categories: [Performance question, GPS data, Automation]
+categories: [Performance Question, GPS data, Automation]
 image: thumbnail.png
 ---
 
-::: {.md-stat-row}
-::: {.md-stat}
-[Within 2 h]{.v}
-[from final whistle to GPS report, down from 10–12 hours]{.l}
-:::
-::: {.md-stat}
-[2 reports]{.v}
-[each matched to the decisions its data can support]{.l}
-:::
-::: {.md-stat}
-[5 matches]{.v}
-[possession tagging validated against video]{.l}
-:::
-:::
 
 ## The question
 
-Relegation removed the league data feed that match physical insight depended on, and the club's legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. **How can they keep receiving match physical insight, with context, without a league data feed?**
+Relegation removed the league data feed that match physical insight depended on, and the club's legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight the morning after a match. **How do you keep delivering match physical insight, with context, when the data it was built on has gone?**
 
-## What I did
+## The approach
 
-Two sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:
+Two sources were left, and neither was a like-for-like replacement. GPS was collected at every match but had mainly been used in training. League-wide broadcast tracking covered every team, but with different speed zones. Rather than force one source to do everything, I designed a report around what each could honestly support:
 
-- **A contextualised GPS report** for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player's output into in possession, out of possession and ball out of play, and into 15-minute blocks.
-- **A broadcast tracking trend report** for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren't directly comparable.
+- **A contextualised GPS report for player decisions.** This became the core product, ready within 2 hours of the final whistle.
+- **A broadcast tracking trend report for team-level context.** It sets our physical output against the opposition and the league. Because its speed zones aren't directly comparable with GPS, it informs the picture rather than driving decisions.
 
-I lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner's computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before.
+## What I built
+
+The GPS report started as match summaries and grew into a full contextual breakdown:
+
+- **A possession state model**, built from Opta match events, that splits every player's output into in possession, out of possession and ball out of play.
+- **15-minute blocks**, showing how each player's output changed across the match.
+- **Time alignment** of the GPS and Opta feeds by their Unix timestamps, so every metre of running is tied to what was happening in the game at that moment.
+- **Validation** of the possession tagging against match video, across a sample of five matches, before anyone relied on it.
+- **An automated pipeline**, from raw files to a finished report on the practitioner's computer, leaving room for them to add their own context.
+
+I released it in three layers and only launched each one once staff trusted the one before. That kept adoption high: nobody was asked to change how they worked on the strength of numbers they hadn't yet learned to read.
 
 ## The outcome
 
-The GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session.
+The GPS report now lands within 2 hours of the final whistle instead of after a 10–12 hour wait, and with more context than the league feed ever gave.
+
+That speed changes decisions. When a substitute who played 30 minutes shows a sprint load closer to a full 90, staff see it before MD+1 is planned and can adjust the session the same evening, rather than finding out after it.
 
 ## The deck
 

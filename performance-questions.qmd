@@ -1,6 +1,6 @@
 ---
 title: "Performance Questions"
-description: "Practical problems from applied sport, framed as a question and the process to answer."
+description: "Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform."
 listing:
   id: performance-list
   contents: "projects/performance/*/index.qmd"
@@ -10,6 +10,7 @@ listing:
   fields: [image, title, description, categories]
   image-height: 220px
 ---
+
 In elite sport, most analytical projects begin with a question from a coach, practitioner or stakeholder, raised through their day-to-day work. The aim is more than an answer: it is a change in how they do their job or how their athletes perform. Each project here shows how I take one of these questions, frame it, plan the analysis behind it and turn the result into insight that informs practice.
 
 ::: {#performance-list}

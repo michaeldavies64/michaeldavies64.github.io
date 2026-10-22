@@ -18,7 +18,7 @@ listing:
 
 # Turning complex performance data into clear decisions
 
-[Senior data scientist with six years in elite football, leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decisions, and turn the results into clear messages people can act on.]{.md-lead}
+[I’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making.]{.md-lead}
 
 ::: {.md-actions}
 [See my work](#work){.btn .btn-primary}
@@ -47,12 +47,12 @@ listing:
 <div class="md-cards">
    <a class="md-card" href="performance-questions.html">
     <span class="md-card-num">01</span>
-    <h3>Performance questions</h3>
+    <h3>Performance Questions</h3>
     <p>Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.</p>
   </a>
   <a class="md-card" href="research-questions.html">
     <span class="md-card-num">02</span>
-    <h3>Research questions</h3>
+    <h3>Research Questions</h3>
     <p>Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.</p>
   </a>
   <a class="md-card" href="products.html">

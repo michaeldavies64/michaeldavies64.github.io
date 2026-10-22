@@ -22,9 +22,9 @@ website:
     title: "Michael Davies"
     left:
       - href: performance-questions.qmd
-        text: Performance questions
+        text: Performance Questions
       - href: research-questions.qmd
-        text: Research questions
+        text: Research Questions
       - href: products.qmd
         text: Products
       - href: about.qmd

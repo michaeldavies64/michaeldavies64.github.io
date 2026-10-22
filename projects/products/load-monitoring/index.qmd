@@ -12,21 +12,6 @@ image: thumbnail.png
 
 [First version live]{.md-tag} The app is hosted on Posit Connect Cloud. After a quiet spell it takes about 10 seconds to wake up; the welcome page shows while it does.
 
-::: {.md-stat-row}
-::: {.md-stat}
-[3 seasons]{.v}
-[of daily GPS data, August 2022 to April 2025]{.l}
-:::
-::: {.md-stat}
-[721 sessions]{.v}
-[training and match days with GPS load recorded]{.l}
-:::
-::: {.md-stat}
-[147 matches]{.v}
-[under five head coaches]{.l}
-:::
-:::
-
 ## Context
 
 ### The Vizathon

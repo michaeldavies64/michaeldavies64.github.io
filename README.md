@@ -6,10 +6,10 @@ I'm a senior data scientist in elite football. The portfolio shows how I take a 
 
 ## What's in it
 
-**[Performance questions](https://michaeldavies64.github.io/performance-questions.html)**: questions raised by practitioners in their day-to-day work, answered to change how they do their job.
+**[Performance Questions](https://michaeldavies64.github.io/performance-questions.html)**: questions raised by practitioners in their day-to-day work, answered to change how they do their job.
 - [Rebuilding match physical insight after relegation](https://michaeldavies64.github.io/projects/performance/rebuilding-match-insight/): a contextualised GPS pipeline that replaced a lost league data feed and cut report turnaround from 10 to 12 hours to within 2.
 
-**[Research questions](https://michaeldavies64.github.io/research-questions.html)**: questions that start from the data, where the work is choosing and checking the right model.
+**[Research Questions](https://michaeldavies64.github.io/research-questions.html)**: questions that start from the data, where the work is choosing and checking the right model.
 - Bayesian team ratings and season simulation in rugby (in progress).
 
 **[Products](https://michaeldavies64.github.io/products.html)**: self-serve tools and the systems behind them.
