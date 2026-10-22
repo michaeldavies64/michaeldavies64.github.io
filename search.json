@@ -165,7 +165,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I’m a data scientist who has spent six years inside elite football, first as a performance data analyst and now leading data insight for the Sport Science and Medical departments at Leicester City Football Club. My job is to turn large, messy performance data into information that coaches, practitioners and senior staff trust and act on.\nI work across the whole data lifecycle: owning pipelines from external providers, building models, and designing self-serve tools so people can answer their own questions. I care as much about how an insight is communicated as about the analysis behind it."
+    "text": "I’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making, and I take just as much care over communicating the results, turning analysis into clear messages that stakeholders can act on.\nI’ve line managed students who have gone on to build their own careers in football.\nThis year I completed my PhD on the context behind physical performance in elite men’s football. It taught me how to plan and frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour. I apply that same approach to everything I build."
   },
   {
     "objectID": "about.html#experience",
@@ -200,7 +200,7 @@
     "href": "index.html",
     "title": "Turning complex performance data into clear decisions",
     "section": "",
-    "text": "Michael Davies, PhD\n\n\nI’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making, and I take just as much care over communicating the results, turning analysis into clear messages that stakeholders can act on. I’ve line managed students who have gone on to build their own careers in football. This year I completed my PhD on the context behind physical performance in elite men’s football. It taught me how to plan and frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour. I apply that same approach to everything I build.\n\nSee my work About me"
+    "text": "Michael Davies, PhD\n\n\nSenior data scientist with six years in elite football, leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decisions, and turn the results into clear messages people can act on.\n\nSee my work About me"
   },
   {
     "objectID": "index.html#work",
