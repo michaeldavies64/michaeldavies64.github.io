@@ -4,7 +4,7 @@
     "href": "performance-questions.html",
     "title": "Performance Questions",
     "section": "",
-    "text": "Within elite sport, analytical projects often originate from performance questions raised by coaches, practitioners and stakeholders. In this section, I outline how I translate these questions into analytical projects that generate insights and inform practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
+    "text": "In elite sport, most analytical projects begin with a question from a coach, practitioner or stakeholder, raised through their day-to-day work. The aim is more than an answer: it is a change in how they do their job or how their athletes perform. Each project here shows how I take one of these questions, frame it, plan the analysis behind it and turn the result into insight that informs practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "products.html",
@@ -95,7 +95,7 @@
     "href": "research-questions.html",
     "title": "Research questions",
     "section": "",
-    "text": "These projects take a modelling question all the way through: choosing an approach that fits the data, fitting and checking it, and turning the output into something a non-specialist can use. Code is linked from each project."
+    "text": "These projects start from the data rather than a practitioner’s brief, so the question is about method: which approach fits the data, and why. Each one goes all the way through, comparing methods and models, fitting and checking the chosen one, and turning the output into something a non-specialist can use. Code is linked from each project."
   },
   {
     "objectID": "research-questions.html#in-progress",
@@ -200,14 +200,14 @@
     "href": "index.html",
     "title": "Turning complex performance data into clear decisions",
     "section": "",
-    "text": "Michael Davies, PhD\n\n\nI’m a data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that put the right information in front of the people who make the call.\n\nSee my work About me"
+    "text": "Michael Davies, PhD\n\n\nI’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making, and I take just as much care over communicating the results, turning analysis into clear messages that stakeholders can act on. I’ve line managed students who have gone on to build their own careers in football. This year I completed my PhD on the context behind physical performance in elite men’s football. It taught me how to plan and frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour. I apply that same approach to everything I build.\n\nSee my work About me"
   },
   {
     "objectID": "index.html#work",
     "href": "index.html#work",
     "title": "Turning complex performance data into clear decisions",
     "section": "How this portfolio is organised",
-    "text": "How this portfolio is organised\n\n  \n    01\n    Performance questions\n    Practical problems from applied environments, framed as a question, reasoned through and answered with a recommendation.\n  \n  \n    02\n    Research questions\n    Statistical modelling end to end: choosing the model, fitting and checking it, and communicating uncertainty honestly.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
+    "text": "How this portfolio is organised\n\n   \n    01\n    Performance questions\n    Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.\n  \n  \n    02\n    Research questions\n    Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
   },
   {
     "objectID": "index.html#latest-work",
