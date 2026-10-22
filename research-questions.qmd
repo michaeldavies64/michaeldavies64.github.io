@@ -21,7 +21,12 @@ These projects start from the data rather than a practitioner’s brief, so the 
 ::: {.md-cards}
 ::: {.md-card}
 [In progress]{.md-tag .muted}
-<h3>Bayesian team ratings and season simulation in rugby</h3>
-<p>A hierarchical Bayesian model of attack and defence strength, fitted with MCMC, used to simulate a season and estimate each team's finishing probabilities.</p>
+<h3>Experience in Rugby World Cup squads</h3>
+<p>What separated the semi-finalists from the beaten quarter-finalists, 2015–2023: an international experience measure built from scraped test data, player segments from three clustering methods, and where in the team the difference sat.</p>
+:::
+::: {.md-card}
+[In progress]{.md-tag .muted}
+<h3>Bayesian team ratings in rugby</h3>
+<p>A hierarchical Bayesian model of attack and defence strength, giving every team a quality rating with honest uncertainty.</p>
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Bayesian team ratings and season simulation in rugby"
-description: "A hierarchical Bayesian model of attack and defence strength, used to simulate a season and estimate finishing probabilities."
+title: "Bayesian team ratings in rugby"
+description: "A hierarchical Bayesian model of attack and defence strength, giving every team a quality rating with honest uncertainty."
 date: 2026-10-15
 categories: [Research Question, Bayesian modelling, Rugby]
 image: thumbnail.png
@@ -22,7 +22,9 @@ Why this model, written for a non-specialist first, with the maths below.
 
 ## Checking the model
 
-## Simulating the season
+## Using the ratings
+
+The ratings give a measure of team quality that other work can build on, starting with weighting club minutes by the strength of the opposition in [Experience in Rugby World Cup squads](../rwc-squad-experience/index.qmd).
 
 ```{r}
 #| label: example-chunk
