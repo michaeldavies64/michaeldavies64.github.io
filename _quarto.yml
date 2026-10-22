@@ -31,7 +31,7 @@ website:
         text: About
     right:
       - icon: linkedin
-        href: "https://www.linkedin.com/in/YOUR-LINKEDIN"
+        href: "https://www.linkedin.com/in/michael-davies-4505b8114"
         aria-label: LinkedIn
         target: _blank
       - icon: github

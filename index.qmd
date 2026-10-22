@@ -18,7 +18,7 @@ listing:
 
 # Turning complex performance data into clear decisions
 
-[I’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making, and I take just as much care over communicating the results, turning analysis into clear messages that stakeholders can act on. I’ve line managed students who have gone on to build their own careers in football. This year I completed my PhD on the context behind physical performance in elite men’s football. It taught me how to plan and frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour. I apply that same approach to everything I build.]{.md-lead}
+[Senior data scientist with six years in elite football, leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decisions, and turn the results into clear messages people can act on.]{.md-lead}
 
 ::: {.md-actions}
 [See my work](#work){.btn .btn-primary}

@@ -1,54 +1,32 @@
-# Michael Davies — portfolio
+# Michael Davies: portfolio
 
-Personal portfolio built with R and Quarto, styled with the Slate and Signal design system, and published with GitHub Pages at **https://michaeldavies64.github.io**.
+The source for my data science portfolio, live at **[michaeldavies64.github.io](https://michaeldavies64.github.io/)**.
 
-## Before the first publish
+I'm a senior data scientist in elite football. The portfolio shows how I take a question from framing to an answer people can use, across three kinds of work.
 
-Replace `YOUR-LINKEDIN` with your LinkedIn profile URL in `_quarto.yml` (navbar icon) and `about.qmd` ("Get in touch").
+## What's in it
 
-## Publish to GitHub Pages
+**[Performance questions](https://michaeldavies64.github.io/performance-questions.html)**: questions raised by practitioners in their day-to-day work, answered to change how they do their job.
+- [Rebuilding match physical insight after relegation](https://michaeldavies64.github.io/projects/performance/rebuilding-match-insight/): a contextualised GPS pipeline that replaced a lost league data feed and cut report turnaround from 10 to 12 hours to within 2.
 
-1. Open `michaeldavies64.github.io.Rproj` in RStudio and render once: **Build → Render Website**, or `quarto render` in the terminal. This updates `_freeze/`, which holds the results of the R code.
-2. Commit everything (including `_freeze/`) and push to the `main` branch of `michaeldavies64/michaeldavies64.github.io`.
-3. The GitHub Action in `.github/workflows/publish.yml` renders the site and pushes it to a `gh-pages` branch.
-4. First time only: in the repository, go to **Settings → Pages**, set **Source** to "Deploy from a branch", choose `gh-pages` and `/ (root)`, and save.
+**[Research questions](https://michaeldavies64.github.io/research-questions.html)**: questions that start from the data, where the work is choosing and checking the right model.
+- Bayesian team ratings and season simulation in rugby (in progress).
 
-The site is live at https://michaeldavies64.github.io a minute or two later. Every push to `main` republishes it.
+**[Products](https://michaeldavies64.github.io/products.html)**: self-serve tools and the systems behind them.
+- [Building a player load monitoring tool](https://michaeldavies64.github.io/projects/products/load-monitoring/): an R and Shiny app with adaptive normal ranges. [Open the app](https://connect.posit.cloud/michael-davies-personal/content/01a1595f-e7f0-b63f-d2cf-a1ced13e3f21) · [code](https://github.com/michaeldavies64/load-recovery-monitoring)
+- [Slate and Signal](https://michaeldavies64.github.io/projects/products/slate-and-signal/): the design system behind every chart, app and deck here.
 
-## How R code is handled
+## How it's built
 
-`freeze: auto` means R chunks run only on your machine, when the page changes. GitHub uses the saved results in `_freeze/`, so it never needs R or your packages. **After editing a page with R code, render locally and commit `_freeze/` too.**
+Written in R and Quarto and styled with Slate and Signal. Pushing to `main` runs a GitHub Action that renders the site and publishes it to GitHub Pages. R code runs locally only (`freeze: auto`), and the saved results in `_freeze/` are what GitHub uses.
 
-## Structure
+<details>
+<summary>Notes for maintaining the site</summary>
 
-```
-├── _quarto.yml                 # site settings, navbar, theme
-├── index.qmd                   # home
-├── about.qmd                   # about / CV
-├── performance-questions.qmd   # section page with a listing of projects/performance/
-├── research-questions.qmd      # section page with a listing of projects/research/
-├── products.qmd                # section page with a listing of projects/products/
-├── projects/
-│   ├── performance/optical-to-gps/   # draft
-│   ├── research/rugby-ratings/       # draft
-│   └── products/
-│       ├── player-profile/           # draft
-│       └── slate-and-signal/         # published case study
-├── R/
-│   ├── theme_md.R              # ggplot2 theme: theme_md(), md_highlight(), scales
-│   └── make_thumbnails.R       # regenerates listing thumbnails
-├── styles/                     # Slate and Signal light and dark themes
-└── images/                     # logo mark and favicon
-```
+- **Publish:** render locally (`quarto render`), commit everything including `_freeze/`, and push to `main`.
+- **Add a project:** create `projects/<section>/<name>/index.qmd` with `title`, `description`, `date`, `categories` and `image: thumbnail.png`, and add a `thumbnail.png`. It appears on its section page and the home page automatically. `draft: true` keeps a page off the live site.
+- **Charts:** `source("R/theme_md.R")`, then add `theme_md()` and `md_highlight("name")` to any ggplot. Grey for context, teal for the one thing that matters, and titles that state the takeaway.
 
-## Adding a project
+</details>
 
-1. Create a folder under the right section, e.g. `projects/research/my-project/`, with an `index.qmd`.
-2. Give it `title`, `description`, `date`, `categories` and `image: thumbnail.png` in the header, and put a `thumbnail.png` in the folder.
-3. It appears automatically on its section page and on the home page.
-
-Pages marked `draft: true` are left off the published site. The three unfinished projects are drafts with a section skeleton; fill them in and delete the `draft: true` line to publish. When you publish one, remove its "In progress" card from the section page.
-
-## Style rules
-
-Grey (`context`) for everything except the one thing that matters, which is signal teal. Chart titles state the takeaway. In R, `source("R/theme_md.R")` then add `theme_md()` and `md_highlight("name")` to any ggplot.
+Connect on [LinkedIn](https://www.linkedin.com/in/michael-davies-4505b8114).
