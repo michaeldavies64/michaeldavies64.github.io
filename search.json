@@ -4,7 +4,7 @@
     "href": "performance-questions.html",
     "title": "Performance Questions",
     "section": "",
-    "text": "In elite sport, most analytical projects begin with a question from a coach, practitioner or stakeholder, raised through their day-to-day work. The aim is more than an answer: it is a change in how they do their job or how their athletes perform. Each project here shows how I take one of these questions, frame it, plan the analysis behind it and turn the result into insight that informs practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
+    "text": "In elite sport, most analytical projects begin with a question from a coach, practitioner or stakeholder, raised through their day-to-day work. The aim is more than an answer: it is a change in how they do their job or how their athletes perform. Each project here shows how I take one of these questions, frame it, plan the analysis behind it and turn the result into insight that informs practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance Question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "products.html",
@@ -60,28 +60,35 @@
     "href": "projects/performance/rebuilding-match-insight/index.html",
     "title": "Rebuilding match physical insight after relegation",
     "section": "",
-    "text": "Within 2 h from final whistle to GPS report, down from 10–12 hours\n\n\n2 reports each matched to the decisions its data can support\n\n\n5 matches possession tagging validated against video"
+    "text": "Relegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight the morning after a match. How do you keep delivering match physical insight, with context, when the data it was built on has gone?"
   },
   {
     "objectID": "projects/performance/rebuilding-match-insight/index.html#the-question",
     "href": "projects/performance/rebuilding-match-insight/index.html#the-question",
     "title": "Rebuilding match physical insight after relegation",
-    "section": "The question",
-    "text": "The question\nRelegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. How can they keep receiving match physical insight, with context, without a league data feed?"
+    "section": "",
+    "text": "Relegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight the morning after a match. How do you keep delivering match physical insight, with context, when the data it was built on has gone?"
   },
   {
-    "objectID": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
-    "href": "projects/performance/rebuilding-match-insight/index.html#what-i-did",
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#the-approach",
+    "href": "projects/performance/rebuilding-match-insight/index.html#the-approach",
     "title": "Rebuilding match physical insight after relegation",
-    "section": "What I did",
-    "text": "What I did\nTwo sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:\n\nA contextualised GPS report for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player’s output into in possession, out of possession and ball out of play, and into 15-minute blocks.\nA broadcast tracking trend report for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren’t directly comparable.\n\nI lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner’s computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before."
+    "section": "The approach",
+    "text": "The approach\nTwo sources were left, and neither was a like-for-like replacement. GPS was collected at every match but had mainly been used in training. League-wide broadcast tracking covered every team, but with different speed zones. Rather than force one source to do everything, I designed a report around what each could honestly support:\n\nA contextualised GPS report for player decisions. This became the core product, ready within 2 hours of the final whistle.\nA broadcast tracking trend report for team-level context. It sets our physical output against the opposition and the league. Because its speed zones aren’t directly comparable with GPS, it informs the picture rather than driving decisions."
+  },
+  {
+    "objectID": "projects/performance/rebuilding-match-insight/index.html#what-i-built",
+    "href": "projects/performance/rebuilding-match-insight/index.html#what-i-built",
+    "title": "Rebuilding match physical insight after relegation",
+    "section": "What I built",
+    "text": "What I built\nThe GPS report started as match summaries and grew into a full contextual breakdown:\n\nA possession state model, built from Opta match events, that splits every player’s output into in possession, out of possession and ball out of play.\n15-minute blocks, showing how each player’s output changed across the match.\nTime alignment of the GPS and Opta feeds by their Unix timestamps, so every metre of running is tied to what was happening in the game at that moment.\nValidation of the possession tagging against match video, across a sample of five matches, before anyone relied on it.\nAn automated pipeline, from raw files to a finished report on the practitioner’s computer, leaving room for them to add their own context.\n\nI released it in three layers and only launched each one once staff trusted the one before. That kept adoption high: nobody was asked to change how they worked on the strength of numbers they hadn’t yet learned to read."
   },
   {
     "objectID": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
     "href": "projects/performance/rebuilding-match-insight/index.html#the-outcome",
     "title": "Rebuilding match physical insight after relegation",
     "section": "The outcome",
-    "text": "The outcome\nThe GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session."
+    "text": "The outcome\nThe GPS report now lands within 2 hours of the final whistle instead of after a 10–12 hour wait, and with more context than the league feed ever gave.\nThat speed changes decisions. When a substitute who played 30 minutes shows a sprint load closer to a full 90, staff see it before MD+1 is planned and can adjust the session the same evening, rather than finding out after it."
   },
   {
     "objectID": "projects/performance/rebuilding-match-insight/index.html#the-deck",
@@ -93,14 +100,14 @@
   {
     "objectID": "research-questions.html",
     "href": "research-questions.html",
-    "title": "Research questions",
+    "title": "Research Questions",
     "section": "",
     "text": "These projects start from the data rather than a practitioner’s brief, so the question is about method: which approach fits the data, and why. Each one goes all the way through, comparing methods and models, fitting and checking the chosen one, and turning the output into something a non-specialist can use. Code is linked from each project."
   },
   {
     "objectID": "research-questions.html#in-progress",
     "href": "research-questions.html#in-progress",
-    "title": "Research questions",
+    "title": "Research Questions",
     "section": "In progress",
     "text": "In progress\n\n\nIn progress\n\nBayesian team ratings and season simulation in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, fitted with MCMC, used to simulate a season and estimate each team’s finishing probabilities."
   },
@@ -151,7 +158,7 @@
     "href": "projects/products/slate-and-signal/index.html#style-as-code",
     "title": "Slate and Signal: one visual language for every chart, app and deck",
     "section": "Style as code",
-    "text": "Style as code\nThe rules live in one tokens file and are packaged for each tool I use, so a chart picks up the system with a line or two:\nsource(\"R/theme_md.R\")\n\nggplot(df, aes(session, hsr, colour = player)) +\n  geom_line() +\n  md_highlight(\"Player 3\") +   # grey for everyone except the focus\n  theme_md()                   # type, gridlines, titles and captions\nThe same values drive a matplotlib and Plotly theme for Python, a Streamlit configuration, a Quarto slide theme, a PowerPoint template and this website.\n\n\n1 source of truth for every colour and type style\n\n\n6 tools that inherit it: R, Python, Streamlit, Quarto, PowerPoint, web\n\n\nAA WCAG contrast for all text, in light and dark mode"
+    "text": "Style as code\nThe rules live in one tokens file and are packaged for each tool I use, so a chart picks up the system with a line or two:\nsource(\"R/theme_md.R\")\n\nggplot(df, aes(session, hsr, colour = player)) +\n  geom_line() +\n  md_highlight(\"Player 3\") +   # grey for everyone except the focus\n  theme_md()                   # type, gridlines, titles and captions\nThe same values drive a matplotlib and Plotly theme for Python, a Streamlit configuration, a Quarto slide theme, a PowerPoint template and this website."
   },
   {
     "objectID": "projects/products/slate-and-signal/index.html#what-id-do-next",
@@ -207,21 +214,21 @@
     "href": "index.html",
     "title": "Turning complex performance data into clear decisions",
     "section": "",
-    "text": "Michael Davies, PhD\n\n\nSenior data scientist with six years in elite football, leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decisions, and turn the results into clear messages people can act on.\n\nSee my work About me"
+    "text": "Michael Davies, PhD\n\n\nI’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making.\n\nSee my work About me"
   },
   {
     "objectID": "index.html#work",
     "href": "index.html#work",
     "title": "Turning complex performance data into clear decisions",
     "section": "How this portfolio is organised",
-    "text": "How this portfolio is organised\n\n   \n    01\n    Performance questions\n    Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.\n  \n  \n    02\n    Research questions\n    Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
+    "text": "How this portfolio is organised\n\n   \n    01\n    Performance Questions\n    Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.\n  \n  \n    02\n    Research Questions\n    Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
   },
   {
     "objectID": "index.html#latest-work",
     "href": "index.html#latest-work",
     "title": "Turning complex performance data into clear decisions",
     "section": "Latest work",
-    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
+    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance Question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#tools-i-work-with",

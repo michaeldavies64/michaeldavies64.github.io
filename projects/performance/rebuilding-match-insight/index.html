@@ -279,11 +279,11 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../performance-questions.html"> 
-<span class="menu-text">Performance questions</span></a>
+<span class="menu-text">Performance Questions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../research-questions.html"> 
-<span class="menu-text">Research questions</span></a>
+<span class="menu-text">Research Questions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../products.html"> 
@@ -326,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Rebuilding match physical insight after relegation</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Performance question</div>
+    <div class="quarto-category">Performance Question</div>
     <div class="quarto-category">GPS data</div>
     <div class="quarto-category">Automation</div>
   </div>
@@ -357,33 +357,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="md-stat-row">
-<div class="md-stat">
-<p><span class="v">Within 2 h</span> <span class="l">from final whistle to GPS report, down from 10–12 hours</span></p>
-</div>
-<div class="md-stat">
-<p><span class="v">2 reports</span> <span class="l">each matched to the decisions its data can support</span></p>
-</div>
-<div class="md-stat">
-<p><span class="v">5 matches</span> <span class="l">possession tagging validated against video</span></p>
-</div>
-</div>
 <section id="the-question" class="level2">
 <h2 class="anchored" data-anchor-id="the-question">The question</h2>
-<p>Relegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight. <strong>How can they keep receiving match physical insight, with context, without a league data feed?</strong></p>
+<p>Relegation removed the league data feed that match physical insight depended on, and the club’s legacy data ecosystem went with it. Practitioners and stakeholders still expected the same insight the morning after a match. <strong>How do you keep delivering match physical insight, with context, when the data it was built on has gone?</strong></p>
 </section>
-<section id="what-i-did" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-did">What I did</h2>
-<p>Two sources remained: GPS data, used mainly in training, and league-wide broadcast tracking data with different speed zones. I designed two reports around what each could support:</p>
+<section id="the-approach" class="level2">
+<h2 class="anchored" data-anchor-id="the-approach">The approach</h2>
+<p>Two sources were left, and neither was a like-for-like replacement. GPS was collected at every match but had mainly been used in training. League-wide broadcast tracking covered every team, but with different speed zones. Rather than force one source to do everything, I designed a report around what each could honestly support:</p>
 <ul>
-<li><strong>A contextualised GPS report</strong> for player decisions, ready within 2 hours of the match finishing. A possession state model built from Opta match events splits every player’s output into in possession, out of possession and ball out of play, and into 15-minute blocks.</li>
-<li><strong>A broadcast tracking trend report</strong> for team-level context against the opposition and the league, used for context rather than decisions because its speed zones aren’t directly comparable.</li>
+<li><strong>A contextualised GPS report for player decisions.</strong> This became the core product, ready within 2 hours of the final whistle.</li>
+<li><strong>A broadcast tracking trend report for team-level context.</strong> It sets our physical output against the opposition and the league. Because its speed zones aren’t directly comparable with GPS, it informs the picture rather than driving decisions.</li>
 </ul>
-<p>I lined the GPS and Opta feeds up by their Unix timestamps, validated the possession tagging against match video for a sample of five matches, and automated the pipeline so the report lands on the practitioner’s computer ready for them to add their own context. I built the system in three layers, launching each only once staff trusted the one before.</p>
+</section>
+<section id="what-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-built">What I built</h2>
+<p>The GPS report started as match summaries and grew into a full contextual breakdown:</p>
+<ul>
+<li><strong>A possession state model</strong>, built from Opta match events, that splits every player’s output into in possession, out of possession and ball out of play.</li>
+<li><strong>15-minute blocks</strong>, showing how each player’s output changed across the match.</li>
+<li><strong>Time alignment</strong> of the GPS and Opta feeds by their Unix timestamps, so every metre of running is tied to what was happening in the game at that moment.</li>
+<li><strong>Validation</strong> of the possession tagging against match video, across a sample of five matches, before anyone relied on it.</li>
+<li><strong>An automated pipeline</strong>, from raw files to a finished report on the practitioner’s computer, leaving room for them to add their own context.</li>
+</ul>
+<p>I released it in three layers and only launched each one once staff trusted the one before. That kept adoption high: nobody was asked to change how they worked on the strength of numbers they hadn’t yet learned to read.</p>
 </section>
 <section id="the-outcome" class="level2">
 <h2 class="anchored" data-anchor-id="the-outcome">The outcome</h2>
-<p>The GPS report now arrives within 2 hours of the match finishing instead of after a 10–12 hour wait. That speed changes decisions: when a substitute who played 30 minutes shows a sprint load closer to a full 90, staff can see it before MD+1 is planned and modify the session.</p>
+<p>The GPS report now lands within 2 hours of the final whistle instead of after a 10–12 hour wait, and with more context than the league feed ever gave.</p>
+<p>That speed changes decisions. When a substitute who played 30 minutes shows a sprint load closer to a full 90, staff see it before MD+1 is planned and can adjust the session the same evening, rather than finding out after it.</p>
 </section>
 <section id="the-deck" class="level2">
 <h2 class="anchored" data-anchor-id="the-deck">The deck</h2>
