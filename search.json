@@ -1,59 +1,17 @@
 [
   {
-    "objectID": "performance-questions.html",
-    "href": "performance-questions.html",
-    "title": "Performance Questions",
+    "objectID": "research-questions.html",
+    "href": "research-questions.html",
+    "title": "Research Questions",
     "section": "",
-    "text": "In elite sport, most analytical projects begin with a question from a coach, practitioner or stakeholder, raised through their day-to-day work. The aim is more than an answer: it is a change in how they do their job or how their athletes perform. Each project here shows how I take one of these questions, frame it, plan the analysis behind it and turn the result into insight that informs practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance Question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
+    "text": "These projects start from the data rather than a practitioner’s brief, so the question is about method: which approach fits the data, and why. Each one goes all the way through, comparing methods and models, fitting and checking the chosen one, and turning the output into something a non-specialist can use. Code is linked from each project."
   },
   {
-    "objectID": "products.html",
-    "href": "products.html",
-    "title": "Products",
-    "section": "",
-    "text": "Analysis only helps when people use it. These are the tools and systems I’ve built so that the right information reaches the right people without waiting on a bespoke request.\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/products/load-monitoring/index.html",
-    "href": "projects/products/load-monitoring/index.html",
-    "title": "Building a player load monitoring tool",
-    "section": "",
-    "text": "The question this tool answers: is this player’s load where it should be for this point in the match week? It’s built in R, from the raw GPS and recovery files to a self-serve Shiny app, with every decision written up along the way.\nOpen the app View the code on GitHub\nFirst version live The app is hosted on Posit Connect Cloud. After a quiet spell it takes about 10 seconds to wake up; the welcome page shows while it does."
-  },
-  {
-    "objectID": "projects/products/load-monitoring/index.html#context",
-    "href": "projects/products/load-monitoring/index.html#context",
-    "title": "Building a player load monitoring tool",
-    "section": "Context",
-    "text": "Context\n\nThe Vizathon\nIn March 2025, Chelsea FC’s Performance Insights team ran an open vizathon with one brief: create the most compelling physical performance interface for elite football players and their coaches. Entrants worked from a mock dataset covering load, physical development, recovery and individual priorities, and the competition drew 124 entries from 27 countries.\n\n\nThe data\nFour files describe a single player. The values are simulated, but the structure mirrors what a club’s performance department collects. This tool uses the GPS file; the recovery file feeds a companion research question on how recovery responds to load.\n\n\n\n\n\n\n\n\nFile\nWhat it holds\nCoverage\n\n\n\n\nGPS\nDaily training and match load: distance, high-speed running, accelerations, heart rate, with each day labelled by its position in the match week\nAugust 2022 to April 2025\n\n\nPhysical capability\nBenchmark scores for 20 combinations of movement, quality and force expression\nJuly 2023 to March 2025\n\n\nRecovery status\nDaily scores across six categories, from sleep and soreness to blood markers\nJuly 2023 to March 2025\n\n\nIndividual priority areas\nThree development targets agreed by the player and staff\nMarch to May 2025\n\n\n\n\n\nThe club around the data\nThe physical values are simulated, but the fixtures follow Chelsea’s real calendar, and that calendar was unusually turbulent.\n\n\n\n\n\n\n\n\n\n\nSeason\nHead coaches\nLeague\nEurope\n\n\n\n\n2022/23\nTuchel, Potter, Lampard (interim)\n12th\nChampions League quarter-finals\n\n\n2023/24\nPochettino\n6th\nNone; reached the League Cup final\n\n\n2024/25\nMaresca\n4th\nConference League, won in May 2025 (after the data ends)\n\n\n\nFor load monitoring, the calendar matters as much as the numbers. A season with European football means more two-match weeks and shorter gaps to recover and build load between games; a season without it gives longer, more structured training weeks. Three coaching changes in one season would also mean three different training philosophies. Because this data is simulated I won’t read coaching effects into it, but the tool is designed so that a real dataset could be split by these periods."
-  },
-  {
-    "objectID": "projects/products/load-monitoring/index.html#what-the-tool-needs-to-answer",
-    "href": "projects/products/load-monitoring/index.html#what-the-tool-needs-to-answer",
-    "title": "Building a player load monitoring tool",
-    "section": "What the tool needs to answer",
-    "text": "What the tool needs to answer\nStaff don’t need every GPS metric every day. They need a few questions answered quickly:\n\nIs today’s load normal for this day of the match week? Each session is compared with the player’s own norm for that match-week day, so an MD-1 is judged against other MD-1s rather than against a match.\nHow is the week building? Rolling load over the last 7 and 28 days shows whether the player is building, holding or dropping relative to their recent history.\nWhat did the match ask of them? Match load set against the player’s typical full-match output, so a short appearance with a high sprint load stands out.\n\nHigh-speed running above 21 km/h is the lead measure, with total distance, accelerations and decelerations, and session duration alongside."
-  },
-  {
-    "objectID": "projects/products/load-monitoring/index.html#whats-in-the-app",
-    "href": "projects/products/load-monitoring/index.html#whats-in-the-app",
-    "title": "Building a player load monitoring tool",
-    "section": "What’s in the app",
-    "text": "What’s in the app\n\n\n\n\n\n\n\nPage\nWhat it answers\n\n\n\n\nOverview\nWhere the player is today: how many metrics are outside their normal range, the latest session, and the last 28 days of load\n\n\nProfile\nWho the player is, the current status of every metric, and what each type of day typically looks like\n\n\nLongitudinal\nHow load has built over any period: daily, against the adaptive range, or as rolling 7- and 28-day load, with sessions outside their range marked\n\n\nSession check\nOne session against its normal ranges, against the last 10 sessions of the same type, and the recovery scores that followed\n\n\nGlossary\nWhat every metric means and how the app uses it"
-  },
-  {
-    "objectID": "projects/products/load-monitoring/index.html#how-its-built",
-    "href": "projects/products/load-monitoring/index.html#how-its-built",
-    "title": "Building a player load monitoring tool",
-    "section": "How it’s built",
-    "text": "How it’s built\n\n\n\nStage\nWhat it does\nWrite-up\nStatus\n\n\n\n\n1. Data quality\nAutomated checks on all four files, and the cleaning rules that follow from them\nData quality report\nDone\n\n\n2. Pipeline\nRaw files into staging, features and monitoring schemas in DuckDB, with every transformation in SQL\nSQL in the repository\nDone\n\n\n3. Features\nMatch-week labels, a full-match reference (85 to 125 minutes), per-minute and heart-rate band metrics\nFeature engineering report\nDone\n\n\n4. Adaptive ranges\nA normal range for every metric on every type of day, learned from the player’s own history and updated after each session\nAdaptive ranges report\nDone\n\n\n5. Shiny app\nA self-serve app in Slate and Signal, split into ui, server, data visualisation and data management\nThe app\nDone\n\n\n\nThe adaptive ranges follow Roshan et al. (2021), adapted for a single player. Every table carries a player ID, so a squad view can be added later without rework."
-  },
-  {
-    "objectID": "projects/products/load-monitoring/index.html#next",
-    "href": "projects/products/load-monitoring/index.html#next",
-    "title": "Building a player load monitoring tool",
-    "section": "Next",
-    "text": "Next\n\nA targets pipeline, so the whole project rebuilds from one command, and tests for the key tables.\nThe companion research question: how recovery responds to load, using the same pipeline.\n\n\nData: CFC Insights Vizathon 2025, Chelsea FC Performance Insights (simulated data for one player). Raw files are downloaded from the public competition repository, not stored here. Context: History of Chelsea F.C. (2022–present), Chelsea in 2023/24, The Analyst, Premier League, Sports Illustrated."
+    "objectID": "research-questions.html#in-progress",
+    "href": "research-questions.html#in-progress",
+    "title": "Research Questions",
+    "section": "In progress",
+    "text": "In progress\n\n\nIn progress\n\nExperience in Rugby World Cup squads\n\n\nWhat separated the semi-finalists from the beaten quarter-finalists, 2015–2023: an international experience measure built from scraped test data, player segments from three clustering methods, and where in the team the difference sat.\n\n\n\nIn progress\n\nBayesian team ratings in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, giving every team a quality rating with honest uncertainty."
   },
   {
     "objectID": "projects/performance/rebuilding-match-insight/index.html",
@@ -98,39 +56,25 @@
     "text": "The deck\nDownload the deck (PDF)"
   },
   {
-    "objectID": "research-questions.html",
-    "href": "research-questions.html",
-    "title": "Research Questions",
-    "section": "",
-    "text": "These projects start from the data rather than a practitioner’s brief, so the question is about method: which approach fits the data, and why. Each one goes all the way through, comparing methods and models, fitting and checking the chosen one, and turning the output into something a non-specialist can use. Code is linked from each project."
-  },
-  {
-    "objectID": "research-questions.html#in-progress",
-    "href": "research-questions.html#in-progress",
-    "title": "Research Questions",
-    "section": "In progress",
-    "text": "In progress\n\n\nIn progress\n\nExperience in Rugby World Cup squads\n\n\nWhat separated the semi-finalists from the beaten quarter-finalists, 2015–2023: an international experience measure built from scraped test data, player segments from three clustering methods, and where in the team the difference sat.\n\n\n\nIn progress\n\nBayesian team ratings in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, giving every team a quality rating with honest uncertainty."
-  },
-  {
     "objectID": "projects/products/slate-and-signal/index.html",
     "href": "projects/products/slate-and-signal/index.html",
     "title": "Slate and Signal: one visual language for every chart, app and deck",
     "section": "",
-    "text": "Charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.\nI wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point."
+    "text": "All my career I’ve had a club theme or university colours to base my visuals and decks on. When I decided to build a portfolio, I was a bit flummoxed. This work needed to look distinct to me, and there was nothing to borrow.\nA consistent theme matters a lot when delivering insight, because charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.\nI wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point."
   },
   {
     "objectID": "projects/products/slate-and-signal/index.html#the-problem",
     "href": "projects/products/slate-and-signal/index.html#the-problem",
     "title": "Slate and Signal: one visual language for every chart, app and deck",
     "section": "",
-    "text": "Charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.\nI wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point."
+    "text": "All my career I’ve had a club theme or university colours to base my visuals and decks on. When I decided to build a portfolio, I was a bit flummoxed. This work needed to look distinct to me, and there was nothing to borrow.\nA consistent theme matters a lot when delivering insight, because charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.\nI wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point."
   },
   {
-    "objectID": "projects/products/slate-and-signal/index.html#three-words-turned-into-rules",
-    "href": "projects/products/slate-and-signal/index.html#three-words-turned-into-rules",
+    "objectID": "projects/products/slate-and-signal/index.html#the-approach",
+    "href": "projects/products/slate-and-signal/index.html#the-approach",
     "title": "Slate and Signal: one visual language for every chart, app and deck",
-    "section": "Three words, turned into rules",
-    "text": "Three words, turned into rules\nThe brand is built around three words: clear, analytical, sharp. Each one became a rule I could apply without thinking:\n\nClear: grey carries context and one colour carries the message. Every chart title states the answer, not the topic.\nAnalytical: colour has a job. Categorical, sequential, diverging and status colours are separate palettes, and none is borrowed for another’s purpose.\nSharp: one typeface (Inter), two weights, tabular numbers and no decoration that doesn’t carry information."
+    "section": "The approach",
+    "text": "The approach\nHaving been through Andy Kirk’s data visualisation training, I care as much about every chart telling a story as about charts looking consistent. Slate and Signal is built on that. The design decisions are made once, and each one exists to point the reader at what matters.\n\nOne accent, everything else grey. The eye picks out whatever is different before the reader has consciously started looking. So signal teal (#009999) is kept for the one point of the chart, and everything that supports it sits in context grey (#B8C0C9).\nTitles state the takeaway. “High-speed running by player” names the topic. “Player 3 is back above their normal range” tells you what to think, and the chart then backs it up.\nDefined once, used everywhere. Every colour, font and size lives in a single tokens file. That one file generates the R theme, the Quarto styles, the Python helpers and the Streamlit configuration, so a report, an app and a deck can’t drift apart.\nColours keep their meaning. Categorical colours follow a fixed order, so the same series is the same colour in every chart. Status colours are only ever used for status.\nReadable by everyone. The Web Content Accessibility Guidelines (WCAG) set a minimum contrast between text and its background so people with low vision can still read it. Level AA, the standard most organisations work to, asks for a ratio of at least 4.5 to 1 for normal text. Every text colour here meets it, which is why links use a darker teal (#007A7A) than the chart accent.\nSafe for colour blindness. Around 1 in 12 men has some form of colour vision deficiency, most often difficulty telling red from green. In a coaching staff, that’s likely to be someone in the room. Every categorical colour was checked under simulations of the three main types (deutan, protan and tritan) so no two series look the same. Status colours never rely on colour alone either: in range, monitor and out of range always come with an icon and a word.\n\nInter carries the text and JetBrains Mono the code. Every rule has a light and a dark version, so the system holds in either theme."
   },
   {
     "objectID": "projects/products/slate-and-signal/index.html#the-palette",
@@ -166,6 +110,90 @@
     "title": "Slate and Signal: one visual language for every chart, app and deck",
     "section": "What I’d do next",
     "text": "What I’d do next\nPackage the R theme as a small installable package with its own tests, so colleagues could adopt it with library(mdtheme) and get updates automatically."
+  },
+  {
+    "objectID": "performance-questions.html",
+    "href": "performance-questions.html",
+    "title": "Performance Questions",
+    "section": "",
+    "text": "In elite sport, most analytical projects begin with a question from a coach, practitioner or stakeholder, raised through their day-to-day work. The aim is more than an answer: it is a change in how they do their job or how their athletes perform. Each project here shows how I take one of these questions, frame it, plan the analysis behind it and turn the result into insight that informs practice.\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance Question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "",
+    "text": "Michael Davies, PhD\n\n\nI’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making.\n\nSee my work About me"
+  },
+  {
+    "objectID": "index.html#work",
+    "href": "index.html#work",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "How this portfolio is organised",
+    "text": "How this portfolio is organised\n\n   \n    01\n    Performance Questions\n    Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.\n  \n  \n    02\n    Research Questions\n    Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
+  },
+  {
+    "objectID": "index.html#latest-work",
+    "href": "index.html#latest-work",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "Latest work",
+    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance Question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system so every output reads clearly and consistently, and is recognisably mine.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#tools-i-work-with",
+    "href": "index.html#tools-i-work-with",
+    "title": "Turning complex performance data into clear decisions",
+    "section": "Tools I work with",
+    "text": "Tools I work with\n\n\nR\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nStan"
+  },
+  {
+    "objectID": "products.html",
+    "href": "products.html",
+    "title": "Products",
+    "section": "",
+    "text": "Analysis only helps when people use it. These are the tools and systems I’ve built so that the right information reaches the right people without waiting on a bespoke request.\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system so every output reads clearly and consistently, and is recognisably mine.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/products/load-monitoring/index.html",
+    "href": "projects/products/load-monitoring/index.html",
+    "title": "Building a player load monitoring tool",
+    "section": "",
+    "text": "The question this tool answers: is this player’s load where it should be for this point in the match week? It’s built in R, from the raw GPS and recovery files to a self-serve Shiny app, with every decision written up along the way.\nOpen the app View the code on GitHub\nFirst version live The app is hosted on Posit Connect Cloud. After a quiet spell it takes about 10 seconds to wake up; the welcome page shows while it does."
+  },
+  {
+    "objectID": "projects/products/load-monitoring/index.html#context",
+    "href": "projects/products/load-monitoring/index.html#context",
+    "title": "Building a player load monitoring tool",
+    "section": "Context",
+    "text": "Context\n\nThe Vizathon\nIn March 2025, Chelsea FC’s Performance Insights team ran an open vizathon with one brief: create the most compelling physical performance interface for elite football players and their coaches. Entrants worked from a mock dataset covering load, physical development, recovery and individual priorities, and the competition drew 124 entries from 27 countries.\n\n\nThe data\nFour files describe a single player. The values are simulated, but the structure mirrors what a club’s performance department collects. This tool uses the GPS file; the recovery file feeds a companion research question on how recovery responds to load.\n\n\n\n\n\n\n\n\nFile\nWhat it holds\nCoverage\n\n\n\n\nGPS\nDaily training and match load: distance, high-speed running, accelerations, heart rate, with each day labelled by its position in the match week\nAugust 2022 to April 2025\n\n\nPhysical capability\nBenchmark scores for 20 combinations of movement, quality and force expression\nJuly 2023 to March 2025\n\n\nRecovery status\nDaily scores across six categories, from sleep and soreness to blood markers\nJuly 2023 to March 2025\n\n\nIndividual priority areas\nThree development targets agreed by the player and staff\nMarch to May 2025\n\n\n\n\n\nThe club around the data\nThe physical values are simulated, but the fixtures follow Chelsea’s real calendar, and that calendar was unusually turbulent.\n\n\n\n\n\n\n\n\n\n\nSeason\nHead coaches\nLeague\nEurope\n\n\n\n\n2022/23\nTuchel, Potter, Lampard (interim)\n12th\nChampions League quarter-finals\n\n\n2023/24\nPochettino\n6th\nNone; reached the League Cup final\n\n\n2024/25\nMaresca\n4th\nConference League, won in May 2025 (after the data ends)\n\n\n\nFor load monitoring, the calendar matters as much as the numbers. A season with European football means more two-match weeks and shorter gaps to recover and build load between games; a season without it gives longer, more structured training weeks. Three coaching changes in one season would also mean three different training philosophies. Because this data is simulated I won’t read coaching effects into it, but the tool is designed so that a real dataset could be split by these periods."
+  },
+  {
+    "objectID": "projects/products/load-monitoring/index.html#what-the-tool-needs-to-answer",
+    "href": "projects/products/load-monitoring/index.html#what-the-tool-needs-to-answer",
+    "title": "Building a player load monitoring tool",
+    "section": "What the tool needs to answer",
+    "text": "What the tool needs to answer\nStaff don’t need every GPS metric every day. They need a few questions answered quickly:\n\nIs today’s load normal for this day of the match week? Each session is compared with the player’s own norm for that match-week day, so an MD-1 is judged against other MD-1s rather than against a match.\nHow is the week building? Rolling load over the last 7 and 28 days shows whether the player is building, holding or dropping relative to their recent history.\nWhat did the match ask of them? Match load set against the player’s typical full-match output, so a short appearance with a high sprint load stands out.\n\nHigh-speed running above 21 km/h is the lead measure, with total distance, accelerations and decelerations, and session duration alongside."
+  },
+  {
+    "objectID": "projects/products/load-monitoring/index.html#whats-in-the-app",
+    "href": "projects/products/load-monitoring/index.html#whats-in-the-app",
+    "title": "Building a player load monitoring tool",
+    "section": "What’s in the app",
+    "text": "What’s in the app\n\n\n\n\n\n\n\nPage\nWhat it answers\n\n\n\n\nOverview\nWhere the player is today: how many metrics are outside their normal range, the latest session, and the last 28 days of load\n\n\nProfile\nWho the player is, the current status of every metric, and what each type of day typically looks like\n\n\nLongitudinal\nHow load has built over any period: daily, against the adaptive range, or as rolling 7- and 28-day load, with sessions outside their range marked\n\n\nSession check\nOne session against its normal ranges, against the last 10 sessions of the same type, and the recovery scores that followed\n\n\nGlossary\nWhat every metric means and how the app uses it"
+  },
+  {
+    "objectID": "projects/products/load-monitoring/index.html#how-its-built",
+    "href": "projects/products/load-monitoring/index.html#how-its-built",
+    "title": "Building a player load monitoring tool",
+    "section": "How it’s built",
+    "text": "How it’s built\n\n\n\nStage\nWhat it does\nWrite-up\nStatus\n\n\n\n\n1. Data quality\nAutomated checks on all four files, and the cleaning rules that follow from them\nData quality report\nDone\n\n\n2. Pipeline\nRaw files into staging, features and monitoring schemas in DuckDB, with every transformation in SQL\nSQL in the repository\nDone\n\n\n3. Features\nMatch-week labels, a full-match reference (85 to 125 minutes), per-minute and heart-rate band metrics\nFeature engineering report\nDone\n\n\n4. Adaptive ranges\nA normal range for every metric on every type of day, learned from the player’s own history and updated after each session\nAdaptive ranges report\nDone\n\n\n5. Shiny app\nA self-serve app in Slate and Signal, split into ui, server, data visualisation and data management\nThe app\nDone\n\n\n\nThe adaptive ranges follow Roshan et al. (2021), adapted for a single player. Every table carries a player ID, so a squad view can be added later without rework."
+  },
+  {
+    "objectID": "projects/products/load-monitoring/index.html#next",
+    "href": "projects/products/load-monitoring/index.html#next",
+    "title": "Building a player load monitoring tool",
+    "section": "Next",
+    "text": "Next\n\nA targets pipeline, so the whole project rebuilds from one command, and tests for the key tables.\nThe companion research question: how recovery responds to load, using the same pipeline.\n\n\nData: CFC Insights Vizathon 2025, Chelsea FC Performance Insights (simulated data for one player). Raw files are downloaded from the public competition repository, not stored here. Context: History of Chelsea F.C. (2022–present), Chelsea in 2023/24, The Analyst, Premier League, Sports Illustrated."
   },
   {
     "objectID": "about.html",
@@ -208,33 +236,5 @@
     "title": "About",
     "section": "Get in touch",
     "text": "Get in touch\nThe best way to reach me is on LinkedIn. My code is on GitHub."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "",
-    "text": "Michael Davies, PhD\n\n\nI’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making.\n\nSee my work About me"
-  },
-  {
-    "objectID": "index.html#work",
-    "href": "index.html#work",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "How this portfolio is organised",
-    "text": "How this portfolio is organised\n\n   \n    01\n    Performance Questions\n    Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.\n  \n  \n    02\n    Research Questions\n    Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.\n  \n  \n    03\n    Products\n    Things people use: self-serve apps, automated reporting and the design system behind my charts and decks."
-  },
-  {
-    "objectID": "index.html#latest-work",
-    "href": "index.html#latest-work",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "Latest work",
-    "text": "Latest work\n\n\n\n\n\n\n\n\n\n\nBuilding a player load monitoring tool\n\n\n\nProduct\n\nR\n\nShiny\n\nLoad monitoring\n\n\n\nA self-serve Shiny app showing one player’s GPS load and recovery against what’s normal for each day of the match week, built in R on Chelsea FC’s Vizathon data.\n\n\n\n\n\n\n\n\n\n\n\n\nRebuilding match physical insight after relegation\n\n\n\nPerformance Question\n\nGPS data\n\nAutomation\n\n\n\nHow a contextualised GPS pipeline replaced a lost league data feed, and cut report turnaround from 10–12 hours to within 2.\n\n\n\n\n\n\n\n\n\n\n\n\nSlate and Signal: one visual language for every chart, app and deck\n\n\n\nProduct\n\nData visualisation\n\nDesign system\n\n\n\nA personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#tools-i-work-with",
-    "href": "index.html#tools-i-work-with",
-    "title": "Turning complex performance data into clear decisions",
-    "section": "Tools I work with",
-    "text": "Tools I work with\n\n\nR\n\n\nShiny\n\n\nQuarto\n\n\nggplot2\n\n\nSQL\n\n\nPython\n\n\nTableau\n\n\nPosit Connect\n\n\nStan"
   }
 ]

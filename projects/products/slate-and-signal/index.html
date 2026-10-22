@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-15">
-<meta name="description" content="A personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.">
+<meta name="dcterms.date" content="2026-10-10">
+<meta name="description" content="A personal design system so every output reads clearly and consistently, and is recognisably mine.">
 
 <title>Slate and Signal: one visual language for every chart, app and deck – Michael Davies</title>
 <style>
@@ -85,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7679f92b18dcf5edba4446b257d74ced.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-66603adf06ee74c517a6d6caed75ec1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-cbebb23bb9dd0a09af880c9f46516ea2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-66603adf06ee74c517a6d6caed75ec1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-6b96b13d0476b2725ac09e7d017f7b8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-148feec59ccc2964e8c51f9cf28291a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-6b96b13d0476b2725ac09e7d017f7b8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -369,7 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    A personal design system built as code, so every output reads clearly, consistently and accessibly without restyling by hand.
+    A personal design system so every output reads clearly and consistently, and is recognisably mine.
   </div>
 </div>
 
@@ -380,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 15, 2026</p>
+      <p class="date">October 10, 2026</p>
     </div>
   </div>
   
@@ -394,17 +394,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem">The problem</h2>
-<p>Charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.</p>
+<p>All my career I’ve had a club theme or university colours to base my visuals and decks on. When I decided to build a portfolio, I was a bit flummoxed. This work needed to look distinct to me, and there was nothing to borrow.</p>
+<p>A consistent theme matters a lot when delivering insight, because charts made in different tools drift apart. A ggplot in a report, a Shiny app and a slide deck each end up with their own colours and fonts, and colour starts to mean nothing in particular. The reader has to work out what to look at every time.</p>
 <p>I wanted one set of rules that every output inherits automatically, so the design decisions are made once and the reader’s attention goes straight to the point.</p>
 </section>
-<section id="three-words-turned-into-rules" class="level2">
-<h2 class="anchored" data-anchor-id="three-words-turned-into-rules">Three words, turned into rules</h2>
-<p>The brand is built around three words: <strong>clear, analytical, sharp</strong>. Each one became a rule I could apply without thinking:</p>
+<section id="the-approach" class="level2">
+<h2 class="anchored" data-anchor-id="the-approach">The approach</h2>
+<p>Having been through <a href="https://visualisingdata.com/">Andy Kirk’s data visualisation training</a>, I care as much about every chart telling a story as about charts looking consistent. Slate and Signal is built on that. The design decisions are made once, and each one exists to point the reader at what matters.</p>
 <ul>
-<li><strong>Clear:</strong> grey carries context and one colour carries the message. Every chart title states the answer, not the topic.</li>
-<li><strong>Analytical:</strong> colour has a job. Categorical, sequential, diverging and status colours are separate palettes, and none is borrowed for another’s purpose.</li>
-<li><strong>Sharp:</strong> one typeface (Inter), two weights, tabular numbers and no decoration that doesn’t carry information.</li>
+<li><strong>One accent, everything else grey.</strong> The eye picks out whatever is different before the reader has consciously started looking. So signal teal (#009999) is kept for the one point of the chart, and everything that supports it sits in context grey (#B8C0C9).</li>
+<li><strong>Titles state the takeaway.</strong> “High-speed running by player” names the topic. “Player 3 is back above their normal range” tells you what to think, and the chart then backs it up.</li>
+<li><strong>Defined once, used everywhere.</strong> Every colour, font and size lives in a single tokens file. That one file generates the R theme, the Quarto styles, the Python helpers and the Streamlit configuration, so a report, an app and a deck can’t drift apart.</li>
+<li><strong>Colours keep their meaning.</strong> Categorical colours follow a fixed order, so the same series is the same colour in every chart. Status colours are only ever used for status.</li>
+<li><strong>Readable by everyone.</strong> The Web Content Accessibility Guidelines (WCAG) set a minimum contrast between text and its background so people with low vision can still read it. Level AA, the standard most organisations work to, asks for a ratio of at least 4.5 to 1 for normal text. Every text colour here meets it, which is why links use a darker teal (#007A7A) than the chart accent.</li>
+<li><strong>Safe for colour blindness.</strong> Around <a href="https://www.colourblindawareness.org/colour-blindness/">1 in 12 men</a> has some form of colour vision deficiency, most often difficulty telling red from green. In a coaching staff, that’s likely to be someone in the room. Every categorical colour was checked under simulations of the three main types (deutan, protan and tritan) so no two series look the same. Status colours never rely on colour alone either: in range, monitor and out of range always come with an icon and a word.</li>
 </ul>
+<p>Inter carries the text and JetBrains Mono the code. Every rule has a light and a dark version, so the system holds in either theme.</p>
 </section>
 <section id="the-palette" class="level2">
 <h2 class="anchored" data-anchor-id="the-palette">The palette</h2>
