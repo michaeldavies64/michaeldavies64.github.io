@@ -11,7 +11,7 @@ listing:
   image-height: 220px
 ---
 
-These projects take a modelling question all the way through: choosing an approach that fits the data, fitting and checking it, and turning the output into something a non-specialist can use. Code is linked from each project.
+These projects start from the data rather than a practitioner’s brief, so the question is about method: which approach fits the data, and why. Each one goes all the way through, comparing methods and models, fitting and checking the chosen one, and turning the output into something a non-specialist can use. Code is linked from each project.
 
 ::: {#research-list}
 :::

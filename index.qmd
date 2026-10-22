@@ -18,7 +18,7 @@ listing:
 
 # Turning complex performance data into clear decisions
 
-[I'm a data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that put the right information in front of the people who make the call.]{.md-lead}
+[I’m a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making, and I take just as much care over communicating the results, turning analysis into clear messages that stakeholders can act on. I’ve line managed students who have gone on to build their own careers in football. This year I completed my PhD on the context behind physical performance in elite men’s football. It taught me how to plan and frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour. I apply that same approach to everything I build.]{.md-lead}
 
 ::: {.md-actions}
 [See my work](#work){.btn .btn-primary}
@@ -45,15 +45,15 @@ listing:
 
 ```{=html}
 <div class="md-cards">
-  <a class="md-card" href="performance-questions.html">
+   <a class="md-card" href="performance-questions.html">
     <span class="md-card-num">01</span>
     <h3>Performance questions</h3>
-    <p>Practical problems from applied environments, framed as a question, reasoned through and answered with a recommendation.</p>
+    <p>Questions raised by practitioners in their day-to-day work, answered to change how they do their job or how their athletes perform.</p>
   </a>
   <a class="md-card" href="research-questions.html">
     <span class="md-card-num">02</span>
     <h3>Research questions</h3>
-    <p>Statistical modelling end to end: choosing the model, fitting and checking it, and communicating uncertainty honestly.</p>
+    <p>Questions that start from the data rather than a practitioner's brief, where the work is choosing between methods and models, checking them and being honest about uncertainty.</p>
   </a>
   <a class="md-card" href="products.html">
     <span class="md-card-num">03</span>
