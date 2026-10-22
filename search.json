@@ -109,7 +109,7 @@
     "href": "research-questions.html#in-progress",
     "title": "Research Questions",
     "section": "In progress",
-    "text": "In progress\n\n\nIn progress\n\nBayesian team ratings and season simulation in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, fitted with MCMC, used to simulate a season and estimate each team’s finishing probabilities."
+    "text": "In progress\n\n\nIn progress\n\nExperience in Rugby World Cup squads\n\n\nWhat separated the semi-finalists from the beaten quarter-finalists, 2015–2023: an international experience measure built from scraped test data, player segments from three clustering methods, and where in the team the difference sat.\n\n\n\nIn progress\n\nBayesian team ratings in rugby\n\n\nA hierarchical Bayesian model of attack and defence strength, giving every team a quality rating with honest uncertainty."
   },
   {
     "objectID": "projects/products/slate-and-signal/index.html",
