@@ -60,6 +60,10 @@ Understanding the 'why' in physical performance: a contextual exploration of phy
 <li>PCA and clustering</li><li>Gaussian mixture models</li><li>Linear mixed models</li><li>CatBoost</li><li>Bayesian modelling</li>
 </ul>
 
+## Away from work
+
+I grew up in the Peak District, which gave me a love of nature and the hills. It's probably why Eryri and the Lake District make my list of places to visit every year. Cycling is my main passion, with the odd parkrun thrown in, and data follows me here as well: I use power, pace and heart rate response to govern my training. Football and rugby are different. I watch as much as I can, but as a fan rather than an analyst, and I might be the only data person in football who doesn't play Fantasy Premier League.
+
 ## Get in touch
 
 The best way to reach me is on [LinkedIn](https://www.linkedin.com/in/michael-davies-4505b8114). My code is on [GitHub](https://github.com/michaeldavies64).
