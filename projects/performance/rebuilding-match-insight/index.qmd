@@ -22,9 +22,9 @@ Two sources were left, and neither was a like-for-like replacement. GPS was coll
 
 The GPS report started as match summaries and grew into a full contextual breakdown:
 
-- **A possession state model**, built from Opta match events, that splits every player's output into in possession, out of possession and ball out of play.
+- **A possession state model**, built from the event data provider's match events, that splits every player's output into in possession, out of possession and ball out of play.
 - **15-minute blocks**, showing how each player's output changed across the match.
-- **Time alignment** of the GPS and Opta feeds by their Unix timestamps, so every metre of running is tied to what was happening in the game at that moment.
+- **Time alignment** of the GPS and event data feeds by their Unix timestamps, so every metre of running is tied to what was happening in the game at that moment.
 - **Validation** of the possession tagging against match video, across a sample of five matches, before anyone relied on it.
 - **An automated pipeline**, from raw files to a finished report on the practitioner's computer, leaving room for them to add their own context.
 
