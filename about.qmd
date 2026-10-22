@@ -3,26 +3,17 @@ title: "About"
 description: "Senior Performance Data Scientist, PhD."
 ---
 
-I'm a senior data scientist with six years in elite football, currently leading data insight for the Sport Science and Medical departments at Leicester City. I build the pipelines, models and self-serve tools that inform decision-making, and I take just as much care over communicating the results, turning analysis into clear messages that stakeholders can act on.
+The best analysis is the one people use, and keep using. In elite sport, the success of an insight comes down to two things. The first is staying close to the people asking the question, so the work answers what they need now and anticipates what comes next. The second is keeping it simple and clear, because decisions are made fast. That's why my work starts with a [performance question](performance-questions.qmd), not a dataset.
 
-I've line managed students who have gone on to build their own careers in football.
+I've spent six years in elite football data, working my way up from an MSc studentship in 2019 to leading data insight for the Sport Science and Medical departments at Leicester City. I taught myself to code early, driven by an instinct that the processes around me could be automated or done better. That instinct shaped the pipelines and processes I've built since, so practitioners get what they need, when they need it.
 
-This year I completed my PhD on the context behind physical performance in elite men's football. It taught me how to plan and frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour. I apply that same approach to everything I build.
+I take pride in how results are communicated. Every visualisation and report is built to turn analysis into a clear message stakeholders can act on. When relegation cost us the league's data feed, I rebuilt match reporting from our own GPS data, and staff had it within two hours of the final whistle instead of the next day.
 
-::: {.md-stat-row}
-::: {.md-stat}
-[6+ years]{.v}
-[in elite football data science]{.l}
-:::
-::: {.md-stat}
-[45 → 5 min]{.v}
-[reporting turnaround after automating the pipeline]{.l}
-:::
-::: {.md-stat}
-[PhD]{.v}
-[applying machine learning to Premier League physical performance]{.l}
-:::
-:::
+My PhD, completed this year, rests on one idea: in physical performance, context is everything. A number means little in isolation, because so much of it is shaped by the game around it. I set the research up to feed straight into my day-to-day work, and it taught me how to frame a performance question: what needs to be measured, which factors contribute, and how to back the answer with mathematical rigour.
+
+I've line managed data analysts, developing both their technical skills and how they communicate. Analysts I've managed have gone on to roles in sport science departments at other clubs, and that's what I'm proudest of.
+
+I'm still developing my skill set. Right now I'm most interested in fully automated pipelines, the kind our data engineer builds, and in how containerised projects with automated reporting can give data staff their time back. I'm also exploring how AI tools can shape my work. They clearly speed up the build and delivery of insight, so more of my time goes on the question and less on the plumbing, while the judgement stays with me. I'm also continuing to work on how I communicate with stakeholders, because even the best insight has to land to be used.
 
 ## Experience
 
